@@ -1,4 +1,4 @@
-<div class="row">
+
 	<div class="col-xs-12 xl-first-text text-center">
 		<div class="second-header text-center">
 			 С любовью и заботой о ваших малышах
@@ -8,4 +8,3 @@
 		</p>
  <a class="usually-link text-center" href="./history.html">Подробнее о Nuovita</a>
 	</div>
-</div>

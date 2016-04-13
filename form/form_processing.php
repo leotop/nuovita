@@ -1,5 +1,5 @@
 <?php
-/* Осуществляем проверку вводимых данных и их защиту от враждебных 
+/* Осуществляем проверку вводимых данных и их защиту от враждебных
 скриптов */
 
 function check_var($var) {
@@ -14,12 +14,12 @@ if (isset($_POST['submit1'])) {
 	$your_name = check_var("email");
 	//$telephone = check_var("telephone1");
 
-	
+
 	$message = "Новая заявка с сайта nuovita.ru! <br/>";
 	$message .="Электронный адрес отправителя: $your_name <br/>";
 
 	//$message .="Телефонный номер: $telephone <br/>";
-	       
+
 } else if (isset($_POST['submit2'])) {
 
 	$your_name = check_var("name2");
@@ -59,8 +59,8 @@ if (isset($_POST['submit1'])) {
 	$message = check_var("people5");
 	$radio = check_var("Radio1");
 
-	if ($radio == "0") 
-		$ras = "Организация"; 
+	if ($radio == "0")
+		$ras = "Организация";
 	else if ($radio == "1")
 		$ras = "Частное лицо";
 	else
@@ -73,7 +73,7 @@ if (isset($_POST['submit1'])) {
 	$message .="Телефонный номер: $telephone <br/>";
 	$message .="Дата мероприятия: $date <br/>";
 	$message .="Количество человек: $people <br/>";
-	       
+
 } */else {
     echo "0";
     die();
@@ -96,9 +96,9 @@ $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
 $mail = mail($to, $subject, $message, $headers);
 if ($mail) {
-	echo '1'; 
+	echo '1';
 } else {
-	echo $message; 
+	echo $message;
 }
 
 ?>
