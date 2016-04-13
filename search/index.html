@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>Nuovita</title>
+      <link rel="stylesheet" type="text/css" href="./css/main.css">
+  </head>
+
+  <body>
+    <div class = "conteiner">
+      <div class="section_1">
+        <div class="content_widht">
+          <div class = "back_icon_1"></div>          
+        </div>
+      </div>
+      <div class="section_2">
+        <div class="content_widht">
+          <div class = "logo"></div>
+          <div class = "main_text">
+            Бренд Nuovita создан специально для того, чтобы помочь молодым мамам и папам <br>
+            в их стрем­лении окружить маленькую новую жизнь заб­отой и вниманием. Впитав<br>
+            в себя свойственные итальянцам восторженную любовь к детям, жизнерадостность и тонкое<br>
+            понимание прекрасного, Nuovita наделяет этими эмо­циями каждый предмет, будь то прелестная<br>
+            колыбель, комфортная кроватка или практичный стульчик для кормления. В сочетании<br>
+            с европейским качествоми, современными технологиями это дает непревзойденный результат<br>
+            в виде красивых, функциональных и невероятно удобных вещей. Все они воплощают тепло,<br>
+            гармонию и уют, которыми родители так хотят наполнить мир своего малыша!
+          </div>
+          <div class = "form_text">
+            Если вы хотите узнать о запуске <br>
+            официального сайта Nuovita первыми, оставьте свой электронный адрес
+          </div>
+          <div class = "form_input">
+            <form class="form_11" id="form_1" action="php/form_processing.php" method="post" onsubmit=""> 
+              <input class="field" id="mail1" type="mail" placeholder="&nbsp&nbsp&nbspВведите электронный адрес" name="email1" required="required">
+              <input class="massege_button" type="submit" name = "submit1f" value="УЗНАТЬ О ЗАПУСКЕ САЙТА" data-wait="УЗНАТЬ У ЗАПУСКА САЙТА" wait="Отправка..." onclick="">              
+              <input type="hidden" name="submit1" value="1">                 
+            </form>
+            <div class="success-message" id="success1">
+              Благодарим за проявленный интерес к нашему сайту.<br>
+              Как только сайт запустится, мы оповестим вас.
+            </div>
+          </div>
+          <div class = "contact">+7 495 709 34 38 <br>info@nuovita.ru </div>
+        </div>
+      </div>
+      <div class="section_3">
+        <div class="content_widht">
+          <div class = "footer">
+            <p>ООО «Нуовита» 2015</p>
+            <div class = "back_icon_3"></div>
+          </div>      
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+         var formProcess = function(number) {
+            var $form = $('#form' + number);
+            var $success = $('#success' + number);
+            var $error = $('#error' + number);
+
+            $success.hide();
+            $error.hide();
+
+            $form.on('submit', function() {
+               console.log($(this).serialize());
+               $.post(
+                  '/form/form_processing.php',
+                  $(this).serialize(),
+                  function(data) {
+                     $form.slideUp();
+                     if (data !== "0") {
+                        $success.show();
+                     } else {
+                        $error.show();
+                     }
+                  }
+                  );
+
+               return false;
+            });
+         }
+
+         $(function() {
+            for (var i = 1; i <= 1; i++) {
+               formProcess(i);
+            }
+         });
+      </script>
+
+  </body>
+</html>

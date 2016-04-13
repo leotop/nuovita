@@ -1,0 +1,255 @@
+/*классы, отвечающие на медиа запросы вынесены в main.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  }
+
+
+#wrapper {
+  float: left;
+  width: 100%;
+  margin-bottom: 0px;
+  }
+
+
+
+.rslides {
+  margin: 0 auto;
+  }
+
+.rslides_container {
+ /* min-height: 20em; */
+  margin-bottom: 0px;
+  position: relative;
+  float: left;
+  width: 100%;
+  }
+
+/*.centered-btns_nav {
+  z-index: 3;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 50%;
+  left: 0;
+  opacity: 0.7;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: transparent url("themes.gif") no-repeat left top;
+  margin-top: -45px;
+  }*/
+
+
+
+.centered-btns_nav:active {
+  opacity: 1.0;
+  }
+
+.centered-btns_nav.next {
+  left: auto;
+ /* background-position: right top;*/
+  right: 0;
+  }
+
+.transparent-btns_nav {
+  z-index: 3;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 0;
+  left: 0;
+  display: block;
+  background: #fff; /* Fix for IE6-9 */
+  opacity: 0;
+  filter: alpha(opacity=1);
+  width: 48%;
+  text-indent: -9999px;
+  overflow: hidden;
+  height: 91%;
+  }
+
+.transparent-btns_nav.next {
+  left: auto;
+  right: 0;
+  }
+
+.large-btns_nav {
+  z-index: 3;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  opacity: 0.6;
+  text-indent: -9999px;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #000 url("themes.gif") no-repeat left 50%;
+  width: 38px;
+  }
+
+.large-btns_nav:active {
+  opacity: 1.0;
+  }
+
+.large-btns_nav.next {
+  left: auto;
+  background-position: right 50%;
+  right: 0;
+  }
+
+.centered-btns_nav:focus,
+.transparent-btns_nav:focus,
+.large-btns_nav:focus {
+  outline: none;
+  }
+
+.centered-btns_tabs,
+.transparent-btns_tabs,
+.large-btns_tabs {
+  width: 8em;
+  position: absolute;
+  margin-top: 10px;
+  text-align: center;
+  z-index: 2;
+  bottom: 1em;
+  left: calc(50% - 4em);
+  }
+
+.centered-btns_tabs li,
+.transparent-btns_tabs li,
+.large-btns_tabs li {
+  display: inline;
+  float: none;
+  _float: left;
+  *float: left;
+  margin-right: 5px;
+  }
+
+.centered-btns_tabs a,
+.transparent-btns_tabs a,
+.large-btns_tabs a {
+  text-indent: -9999px;
+  overflow: hidden;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: transparent;
+  background: rgba(255,255,255, 0);
+  display: inline-block;
+  _display: block;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(255,255,255,1);
+  -moz-box-shadow: inset 0 0 2px 0 rgba(255,255,255,1);
+  box-shadow: inset 0 0 2px 0 rgba(255,255,255,1);
+  width: 11px;
+  height: 11px;
+  }
+
+.centered-btns_here a,
+.transparent-btns_here a,
+.large-btns_here a {
+  background: #fff;
+  background: rgba(255,255,255, .8);
+  }
+
+.centered-btns1_on {
+  width: 100%;
+  display: inline;
+}
+
+.centered-btns2_on {
+  width: 100%;
+  display: inline;
+}
+
+li img {
+  width: 100%;
+}
+
+
+
+#centered-btns2_s0{
+  width: 100%;
+  left: 0;
+  line-height: 0px;
+}
+
+#centered-btns2_s1{
+  width: 100%;
+  left: 0;
+  line-height: 0px;
+}
+
+#centered-btns2_s2{
+  width: 100%;
+  left: 0;  
+  line-height: 0px;
+}
+
+.prev {
+  background-position-y:50%;
+  background-position-x:0%;
+}
+
+.next {
+  background-position-y:50%;
+  background-position-x:100%;  
+}
+/*    transition: opacity 0ms ease-in-out;
+    transition-property: opacity;
+    transition-duration: 0ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: initial;
+
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-padding-start: 0px;
+    */
+
+
+@media (min-width: 960px) {
+    #centered-btns1_s0{
+    width: 100%;
+    left: 0;
+    line-height: 0px;
+  }
+
+  #centered-btns1_s1{
+    width: 100%;
+    left: 0;
+    line-height: 0px;
+  }
+
+  #centered-btns1_s2{
+    width: 100%;
+    left: 0;
+    line-height: 0px;
+  }
+}
+
+@media (max-width: 959px) {
+    #centered-btns1_s0{
+    padding-top: 0em;
+    width: 100%;
+    left: 0;
+    line-height: 0px;
+    background-color: #ff849b;
+  }
+
+  #centered-btns1_s1{
+    padding-top: 23em;
+    width: 100%;
+    left: 0;
+    line-height: 0px;
+    background-color: #a6ffbb;
+  }
+
+  #centered-btns1_s2{
+    padding-top: 23em;
+    width: 100%;
+    left: 0;
+    line-height: 0px;
+    background-color: #e879e2;
+  }
+}
