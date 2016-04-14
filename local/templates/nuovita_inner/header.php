@@ -11,11 +11,11 @@ IncludeTemplateLangFile(__FILE__);
 	<title><?$APPLICATION->ShowTitle()?></title>
     <meta charset = "utf-8">
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/plugins/slider/responsiveslides.css">
+    <link rel="stylesheet" type="text/css" href="/local/templates/.default/plugins/slider/responsiveslides.css">
 	<meta name = "format-detection" content = "telephone=no" />
-    <link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/style/main.css" media = "screen">
-    <link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/style/form_button.css" media = "screen">
+    <link rel="stylesheet" type="text/css" href="/local/templates/.default/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/local/templates/.default/style/main.css" media = "screen">
+    <link rel="stylesheet" type="text/css" href="/local/templates/.default/style/form_button.css" media = "screen">
 
 </head>
 <body>
@@ -94,7 +94,7 @@ IncludeTemplateLangFile(__FILE__);
                     <div class = "row">
                         <div class = "col-md-2 visible-md visible-lg">
                             <a href="/" class = "logo">
-                                <img src="/bitrix/templates/.default/img/main/logo.png">
+                                <img src="/local/templates/.default/img/main/logo.png">
                             </a>
                         </div>
                         <div class = "col-xs-12 col-md-10 header-link-2">
