@@ -1,4 +1,4 @@
-<div class="row wb-buy">
+
 	<div class="col-xs-12 xl-first-text">
 		<div class="second-header text-center">
 			 Выбор магазина и способа покупки
@@ -10,4 +10,3 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 main-shops-button main-shops">
  <a href="./where_to_buy.html">Найти магазин</a>
 	</div>
-</div>

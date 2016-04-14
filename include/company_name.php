@@ -1,1 +1,1 @@
-<img src="<?=SITE_TEMPLATE_PATH?>/img/main/logo.png"  />
+<img src="/bitrix/templates/.default/img/main/logo.png"  />
