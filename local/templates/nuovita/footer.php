@@ -115,11 +115,11 @@ IncludeTemplateLangFile(__FILE__);
 </div>
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src = "/bitrix/templates/.default/js/bootstrap.min.js"></script>
-<script src="/bitrix/templates/.default/plugins/slider/responsiveslides.min.js"></script>
-<script src="/bitrix/templates/.default/plugins/form-button/form_button.min.js"></script>
-<script src="/bitrix/templates/.default/plugins/swipebox-master/jquery.swipebox.min.js"></script>
-<script type="text/javascript" src = "/bitrix/templates/.default/plugins/social-nets/goodshare.min.js"></script>
+<script type="text/javascript" src = "/local/templates/.default/js/bootstrap.min.js"></script>
+<script src="/local/templates/.default/plugins/slider/responsiveslides.min.js"></script>
+<script src="/local/templates/.default/plugins/form-button/form_button.min.js"></script>
+<script src="/local/templates/.default/plugins/swipebox-master/jquery.swipebox.min.js"></script>
+<script type="text/javascript" src = "/local/templates/.default/plugins/social-nets/goodshare.min.js"></script>
 <script type="text/javascript">
     /*$(".rslides").responsiveSlides({
      auto: true,             // Boolean: Animate automatically, true or false
