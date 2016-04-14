@@ -2,21 +2,28 @@
 $aMenuLinks = Array(
 	Array(
 		"Кроватки", 
-		"/", 
+		"/catalog/krovatki/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Матрасы", 
-		"/", 
+		"/catalog/matrasy/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Постельное бельё", 
-		"/", 
+		"/catalog/postelnoe-belye/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Стульчики", 
+		"/catalog/stulchiki/", 
 		Array(), 
 		Array(), 
 		"" 
