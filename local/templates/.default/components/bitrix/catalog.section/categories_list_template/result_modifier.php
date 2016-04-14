@@ -423,7 +423,11 @@ if (!empty($arResult['ITEMS']))
 			}
 		}
 		$arItem['LAST_ELEMENT'] = 'N';
+        $section = CIBlockSection::GetByID($arItem["PROPERTIES"]["items"]["VALUE"])->GetNext();
+        $arItem["SECTION_URL"] = $section["CODE"];
 		$arNewItemsList[$key] = $arItem;
+
+
 	}
 	$arNewItemsList[$key]['LAST_ELEMENT'] = 'Y';
 	$arResult['ITEMS'] = $arNewItemsList;
@@ -475,4 +479,6 @@ if (!empty($arResult['ITEMS']))
 		}
 	}
 }
+
+
 ?>
