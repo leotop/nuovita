@@ -89,7 +89,7 @@ $this->setFrameMode(true);?>
                 <div class = "hidden-xs hidden-sm col-md-1 col-lg-1"></div>
             </div>
 
-
+            <?if($arResult["PROPERTIES"]["item_photos"]["VALUE"]){?>
             <div class = "row">
                 <div class = "hidden-xs hidden-sm col-md-12 col-lg-12 item-second-header">Возможные трансформации</div>
 
@@ -97,6 +97,7 @@ $this->setFrameMode(true);?>
 
                 <div class = "hidden-xs hidden-sm col-md-12 col-lg-12">
                      <?$additional_photo = CFile::GetPath($arResult["PROPERTIES"]["item_photos"]["VALUE"][0])?>
+                     <?if($additional_photo){?>
                     <div class = "row">
                         <div class = "col-md-12 col-lg-12 it-trans-img-1">
                             <img src="<?=$additional_photo?>">
@@ -122,9 +123,10 @@ $this->setFrameMode(true);?>
                             </div>
                         </div>
                     </div>
-
-                    <div class = "row">
+                    <?}?>
                     <?$additional_photo_2 = CFile::GetPath($arResult["PROPERTIES"]["item_photos"]["VALUE"][0])?>
+                    <?if($additional_photo_2){?>
+                    <div class = "row">
                         <div class = "col-md-12 col-lg-12 it-trans-img-2">
                             <img src="<?=$additional_photo_2?>">
                         </div>
@@ -149,17 +151,21 @@ $this->setFrameMode(true);?>
                             </div>
                         </div>
                     </div>
-
+                  <?}?>
                 </div>
 
                 <div class = "hidden-xs hidden-sm col-md-0 col-lg-0"></div>
 
             </div>
+            <?}?>
 
             <div class = "row it-character">
 
                 <div class = "hidden-xs hidden-sm col-md-1 col-lg-2"></div>
-
+                <?
+                    if (!empty($arResult['DISPLAY_PROPERTIES']))
+                    {
+                ?>
                 <div class = "col-xs-12 col-sm-10 col-sm-offset-1 col-md-11 col-md-offset-1 col-lg-6 col-lg-offset-0">
 
                     <div class = "row">
@@ -169,11 +175,7 @@ $this->setFrameMode(true);?>
                         <div></div>
 
                         <div class = "col-xs-12 col-sm-12 col-md-10 col-lg-12 col-lg-offset-0 wb-netshops-list">
-                            <div class = "row">
-                                <?
-                                    if (!empty($arResult['DISPLAY_PROPERTIES']))
-                                    {
-                                ?>
+
                                     <div class = "row">
                                 <?
                                         foreach ($arResult['DISPLAY_PROPERTIES'] as &$arOneProp)
@@ -198,15 +200,17 @@ $this->setFrameMode(true);?>
                                     {
                                 ?>
                                     <div id="<? echo $arItemIDs['DISPLAY_PROP_DIV'] ?>" style="display: none;"></div>
-                                <?
-                                    }
-                                ?>
-                            </div>
+
                         </div>
                     </div>
 
                 </div>
-                <?foreach($arResult["PROPERTIES"]["DOCUMENTS"]["VALUE"] as $arFile){
+
+                <?
+                    }
+                ?>
+                <?if($arResult["PROPERTIES"]["DOCUMENTS"]["VALUE"]){
+                foreach($arResult["PROPERTIES"]["DOCUMENTS"]["VALUE"] as $arFile){
                     $file = CFile::GetFileArray($arFile);
                     $file_origin[] = $file;
                 }
@@ -214,11 +218,15 @@ $this->setFrameMode(true);?>
                 <div class = "col-xs-12 col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 col-lg-2">
                     <div class = "row">
                         <div class = "col-xs-12 second-header">Документы</div>
+                        <?if($file_origin[0]["SRC"]){?>
                         <div class = "col-xs-12 usually-text">Инструкция по сборке и эксплуатации</div>
-
                         <div class = "col-xs-12 it-docum-url"><a target="_blank" href="<?=$file_origin[0]["SRC"]?>"><?=$file_origin[0]["ORIGINAL_NAME"]?></a></div>
+                        <?}
+                        if($file_origin[1]["SRC"]){?>
                         <div class = "col-xs-12 usually-text">Сертификат соответствия</div>
                         <div class = "col-xs-12 it-docum-url"><a target="_blank" href="<?=$file_origin[1]["SRC"]?>"><?=$file_origin[1]["ORIGINAL_NAME"]?></a></div>
+                        <?}?>
                     </div>
                 </div>
+                <?}?>
             </div>
