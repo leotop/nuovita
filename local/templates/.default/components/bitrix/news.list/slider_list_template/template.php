@@ -18,21 +18,20 @@ $this->setFrameMode(true);
         <div class="rslides_container">
             <ul class="rslides" id="slider1">
 
-<?foreach($arResult["ITEMS"] as $arItem):?>
+            <?foreach($arResult["ITEMS"] as $arItem):?>
+                <li style= "display:inline; transition: opacity 0ms ease-in-out;">
+                    <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"];?>" alt="" class = "rslider_max_img">
+                    <img src="<?=$arItem["DETAIL_PICTURE"]["SRC"];?>" alt="" class = "rslider_min_img">
+                    <div class = "rslider-text">
+                        <h2><?=$arItem["NAME"];?></h2>
+                        <p><?=$arItem["PREVIEW_TEXT"];?></p>
+                        <a href = "<? echo($arItem["PROPERTIES"]["details_link"]["VALUE"]); ?>">Узнать больше</a>
+                    </div>
+                    <a href="<? echo($arItem["PROPERTIES"]["details_link"]["VALUE"]); ?>" class = "main_banner_link"> </a>
+                    <a href="<? echo($arItem["PROPERTIES"]["details_link"]["VALUE"]); ?>" class = "mobile-banner-link"></a>
+                </li>
 
-    <li style= "display:inline; transition: opacity 0ms ease-in-out;">
-        <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"];?>" alt="" class = "rslider_max_img">
-        <img src="<?=$arItem["DETAIL_PICTURE"]["SRC"];?>" alt="" class = "rslider_min_img">
-        <div class = "rslider-text">
-            <h2><?=$arItem["NAME"];?></h2>
-            <p><?=$arItem["PREVIEW_TEXT"];?></p>
-            <a href = "<? echo($arItem["DETAIL_TEXT"]); ?>">Узнать больше</a>
-        </div>
-        <a href="<? echo($arItem["DETAIL_TEXT"]); ?>" class = "main_banner_link"> </a>
-        <a href="<? echo($arItem["DETAIL_TEXT"]); ?>" class = "mobile-banner-link"></a>
-    </li>
-
-<?endforeach;?>
+            <?endforeach;?>
 
             </ul>
         </div>

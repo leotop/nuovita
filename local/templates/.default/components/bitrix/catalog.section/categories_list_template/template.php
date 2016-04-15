@@ -66,7 +66,7 @@ if (!empty($arResult['ITEMS']))
 
 
         <div class = "col-xs-12 col-sm-6 col-md-4 col-lg-4"  id="<? echo $strMainID; ?>">
-               <a href="<? echo $GLOBALS['link_to_item_info']; ?>">
+               <a href="/catalog/<? echo $arItem["SECTION_URL"] ?>/">
 
                     <img class = "icon-hover" src="<? echo $arItem['PREVIEW_PICTURE']['SRC']; ?>">
                     <div class = "second-header text-center"><? echo $productTitle; ?></div>
