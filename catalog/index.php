@@ -107,6 +107,7 @@ $APPLICATION->SetTitle("Каталог");
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"ADD_ELEMENT_CHAIN" => "N",
 		"PRICE_CODE" => array(
+			0 => "BASE",
 		),
 		"USE_PRICE_COUNT" => "N",
 		"SHOW_PRICE_COUNT" => "1",
@@ -163,6 +164,36 @@ $APPLICATION->SetTitle("Каталог");
 		"LABEL_PROP" => "-",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"SEF_FOLDER" => "/catalog/",
+		"PRODUCT_DISPLAY_MODE" => "N",
+		"OFFER_ADD_PICT_PROP" => "-",
+		"OFFER_TREE_PROPS" => array(
+		),
+		"OFFERS_CART_PROPERTIES" => array(
+		),
+		"LIST_OFFERS_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"LIST_OFFERS_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"LIST_OFFERS_LIMIT" => "5",
+		"DETAIL_OFFERS_FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "DETAIL_TEXT",
+			2 => "DETAIL_PICTURE",
+			3 => "",
+		),
+		"DETAIL_OFFERS_PROPERTY_CODE" => array(
+			0 => "COLOR",
+			1 => "TRANSLATE_NAME",
+			2 => "",
+		),
+		"OFFERS_SORT_FIELD" => "sort",
+		"OFFERS_SORT_ORDER" => "asc",
+		"OFFERS_SORT_FIELD2" => "id",
+		"OFFERS_SORT_ORDER2" => "desc",
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE#/",

@@ -16,102 +16,40 @@ $this->setFrameMode(true);?>
                     <div class = "row">
                         <div class = "col-xs-2 col-sm-1 col-sm-offset-2 col-md-2 col-md-offset-0 col-lg-2">
                             <ul id="tabs-titles" class = "nav">
-
+                              <?foreach ($arResult['OFFERS'] as $key => $arOneOffer){?>
+                              <?$picture = CFile::GetPath($arOneOffer["COLOR_ITEM"]["DETAIL_PICTURE"]);?>
                                 <li class="nav-title">
-                                    <img src="./img/tabs/nav-1.png">
+                                    <img src="<?=$picture?>">
                                 </li>
-
-                                <li class = "nav-title">
-                                    <img src="./img/tabs/nav-2.png">
-                                </li>
-
-                                <li class = "nav-title">
-                                    <img src="./img/tabs/nav-3.png">
-                                </li>
-
-                                <li class="nav-title">
-                                    <img src="./img/tabs/nav-4.png">
-                                </li>
-
-                                <li class = "nav-title">
-                                    <img src="./img/tabs/nav-5.png">
-                                </li>
-
-                                <li class = "nav-title">
-                                    <img src="./img/tabs/nav-6.png">
-                                </li>
-
-                                <li class="nav-title">
-                                    <img src="./img/tabs/nav-7.png">
-                                </li>
-
+                             <?}?>
                             </ul>
                         </div>
                         <div class = "col-xs-10 col-sm-9 col-md-10 col-lg-10">
                             <ul id="tabs-contents">
+                            <?if($arResult['OFFERS']){
+                            foreach ($arResult['OFFERS'] as $key => $arOneOffer){?>
                                 <li>
                                     <div class="content">
-                                        <a href="./img/item/bianco_2.jpg" class="swipebox" title="Bianco">
-                                            <img src="./img/item/bianco_2.jpg">
+                                        <a href="<?=$arOneOffer["DETAIL_PICTURE"]["SRC"]?>" class="swipebox" title="<?=$arOneOffer["COLOR_ITEM"]["NAME"]?>">
+                                            <img src="<?=$arOneOffer["DETAIL_PICTURE"]["SRC"]?>">
                                         </a>
-                                        <p class = "it-tab-head">Bianco</p>
-                                        <p class = "it-tab-text">Белый</p>
+                                        <p class = "it-tab-head"><?=$arOneOffer["COLOR_ITEM"]["NAME"]?></p>
+                                        <p class = "it-tab-text"><?=$arOneOffer["NAME"]?></p>
                                     </div>
                                 </li>
+                                <?}
+                            } else { ?>
                                 <li>
                                     <div class="content">
-                                        <a href="./img/item/perla_2.jpg" class="swipebox" title="Perla">
-                                            <img src="./img/item/perla_2.jpg">
+                                        <a href="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" class="swipebox" title="<?=$arResult["NAME"]?>">
+                                            <img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>">
                                         </a>
-                                        <p class = "it-tab-head">Perla</p>
-                                        <p class = "it-tab-text">Белый жемчуг</p>
+                                        <p class = "it-tab-head"><?=$arResult["NAME"]?></p>
+                                        <p class = "it-tab-text"><?=$arOneOffer["NAME"]?></p>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="content">
-                                        <a href="./img/item/avorio_2.jpg" class="swipebox" title="Vaniglia">
-                                            <img src="./img/item/avorio_2.jpg">
-                                        </a>
-                                        <p class = "it-tab-head">Vaniglia</p>
-                                        <p class = "it-tab-text">Ваниль</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="content">
-                                        <a href="./img/item/vaniglia_2.jpg" class="swipebox" title="Avorio">
-                                            <img src="./img/item/vaniglia_2.jpg">
-                                        </a>
-                                        <p class = "it-tab-head">Avorio</p>
-                                        <p class = "it-tab-text">Слоновая кость</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="content">
-                                        <a href="./img/item/mogano_2.jpg" class="swipebox" title="Mogano">
-                                            <img src="./img/item/mogano_2.jpg">
-                                        </a>
-                                        <p class = "it-tab-head">Mogano</p>
-                                        <p class = "it-tab-text">Махагон</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="content">
-                                        <a href="./img/item/noce_scuro_2.jpg" class="swipebox" title="Noce scuro">
-                                            <img src="./img/item/noce_scuro_2.jpg">
-                                        </a>
-                                        <p class = "it-tab-head">Noce scuro</p>
-                                        <p class = "it-tab-text">Темный орех</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="content">
-                                        <a href="./img/item/wenge_2.jpg" class="swipebox" title="Wenge">
-                                            <img src="./img/item/wenge_2.jpg">
-                                        </a>
-                                        <p class = "it-tab-head">Wenge</p>
-                                        <p class = "it-tab-text">Венге</p>
-                                    </div>
-                                </li>
+
+                            <?}?>
                             </ul>
                         </div>
                     </div>
@@ -122,21 +60,27 @@ $this->setFrameMode(true);?>
 
                 <div class = "col-xs-12 col-sm-12 col-md-5 col-lg-5 it-descript">
                     <div class = "row">
-                        <div class = "col-xs-12 col-sm-12 col-md-12 it-descript-header">Кровать-трансформер Nuovita Nido Magia</div>
+                        <div class = "col-xs-12 col-sm-12 col-md-12 it-descript-header">
+                            <? echo (
+                                isset($arResult["IPROPERTY_VALUES"]["ELEMENT_PAGE_TITLE"]) && $arResult["IPROPERTY_VALUES"]["ELEMENT_PAGE_TITLE"] != ''
+                                ? $arResult["IPROPERTY_VALUES"]["ELEMENT_PAGE_TITLE"]
+                                : $arResult["NAME"]
+                            ); ?>
+                        </div>
 
-                        <div class = "col-xs-12 col-sm-12 col-md-12 it-descript-text">Детская кроватка Nido Magia – это настоящее гнездышко для вашего малыша, милое, уютное и невероятно удобное. Только представьте, как сладко будет посапывать в нем младенец! Деткам постарше кроватка тоже подойдет, ведь за счет трансформаций она растет вместе с ребенком, надолго обеспечивая ему комфортное спальное место и пространство для игр и занятий. Натуральные материалы, безупречное качество, современный дизайн – все в ней призвано воплотить вашу любовь и заботу!</div>
+                        <div class = "col-xs-12 col-sm-12 col-md-12 it-descript-text"><?=$arResult["DETAIL_TEXT"]?></div>
 
                         <div class = "col-xs-12 col-sm-12 col-md-12 it-descript-contact">
                             <div class = "row">
                                 <div class = "col-xs-12 col-sm-12 col-md-7 col-lg-6 it-descript-social goodshare-color">
-                                    <a href="#" class="goodshare" data-type="fb"><img src="./img/item/fb.png"></a>
-                                    <a href="#" class="goodshare" data-type="vk"><img src="./img/item/vk.png"></a>
-                                    <a href="#" class="goodshare" data-type="ok"><img src="./img/item/oc.png"></a>
-                                    <a href="#" class="goodshare" data-type="tw"><img src="./img/item/tw.png"></a>
-                                    <a href="#" class="goodshare" data-type="mr"><img src="./img/item/social.png"></a>
+                                    <a href="#" class="goodshare" data-type="fb"><img src="/local/templates/.default/img/item/fb.png"></a>
+                                    <a href="#" class="goodshare" data-type="vk"><img src="/local/templates/.default/img/item/vk.png"></a>
+                                    <a href="#" class="goodshare" data-type="ok"><img src="/local/templates/.default/img/item/oc.png"></a>
+                                    <a href="#" class="goodshare" data-type="tw"><img src="/local/templates/.default/img/item/tw.png"></a>
+                                    <a href="#" class="goodshare" data-type="mr"><img src="/local/templates/.default/img/item/social.png"></a>
                                 </div>
                                 <div class = "col-xs-12 col-sm-12 col-md-5 col-lg-6 it-descript-shop">
-                                    <a href="./where_to_buy.html">Найти магазин</a>
+                                    <a href="/gde-kupit/">Найти магазин</a>
                                 </div>
                             </div>
                         </div>
@@ -152,10 +96,10 @@ $this->setFrameMode(true);?>
                 <div class = "hidden-xs hidden-sm col-md-0 col-lg-0"></div>
 
                 <div class = "hidden-xs hidden-sm col-md-12 col-lg-12">
-
+                     <?$additional_photo = CFile::GetPath($arResult["PROPERTIES"]["item_photos"]["VALUE"][0])?>
                     <div class = "row">
                         <div class = "col-md-12 col-lg-12 it-trans-img-1">
-                            <img src="./img/item/it-img-row-1.png">
+                            <img src="<?=$additional_photo?>">
                         </div>
                         <div class = "col-md-10 col-md-offset-1">
                             <div class = "row">
@@ -180,8 +124,9 @@ $this->setFrameMode(true);?>
                     </div>
 
                     <div class = "row">
+                    <?$additional_photo_2 = CFile::GetPath($arResult["PROPERTIES"]["item_photos"]["VALUE"][0])?>
                         <div class = "col-md-12 col-lg-12 it-trans-img-2">
-                            <img src="./img/item/it-img-row-2.png">
+                            <img src="<?=$additional_photo_2?>">
                         </div>
                         <div class = "col-md-10 col-md-offset-1">
                             <div class = "row">
@@ -222,81 +167,58 @@ $this->setFrameMode(true);?>
                             Характеристики
                         </div>
                         <div></div>
+
                         <div class = "col-xs-12 col-sm-12 col-md-10 col-lg-12 col-lg-offset-0 wb-netshops-list">
                             <div class = "row">
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name">Возраст ребенка</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">С рождения до 9 лет</div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name">Материалы</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">Массив бука, экологически чистые краски и лаки</div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name it-character-size">Внешние габаритные размеры, см</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">
+                                <?
+                                    if (!empty($arResult['DISPLAY_PROPERTIES']))
+                                    {
+                                ?>
                                     <div class = "row">
-                                        <div class = "col-xs-12 col-sm-12 col-md-12">Колыбель  81x81x93</div>
-                                        <div class = "col-xs-12 col-sm-12 col-md-12">Детская кровать  131x81x93</div>
-                                        <div class = "col-xs-12 col-sm-12 col-md-12">Подростковая кровать  181x81x76</div>
+                                <?
+                                        foreach ($arResult['DISPLAY_PROPERTIES'] as &$arOneProp)
+                                        {
+                                ?>
+                                        <div class="col-xs-12 col-sm-5 col-md-4 wb-netshop-name">
+                                        <? echo $arOneProp['NAME']; ?></div>
+                                        <div class="col-xs-12 col-sm-7 col-md-7 it-charact-value"><?
+                                            echo (
+                                                is_array($arOneProp['DISPLAY_VALUE'])
+                                                ? implode(' / ', $arOneProp['DISPLAY_VALUE'])
+                                                : $arOneProp['DISPLAY_VALUE']
+                                            ); ?></div>
+                                            <div class = "clearfix"></div><?
+                                        }
+                                        unset($arOneProp);
+                                ?>
                                     </div>
-                                </div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name it-character-size">Размеры спального места, см</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">
-                                    <div class = "row">
-                                        <div class = "col-xs-12 col-sm-12 col-md-12">Колыбель   76x76</div>
-                                        <div class = "col-xs-12 col-sm-12 col-md-12">Детская кровать  126x76</div>
-                                        <div class = "col-xs-12 col-sm-12 col-md-12">Подростковая кровать  176x76</div>
-                                    </div>
-                                </div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name">Механизм качания</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">Поперечный маятник</div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name">Количество уровней ложа</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">3</div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name">Съемная передняя стенка</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">Да</div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name">Колеса</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">Да</div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name">Наличие стопоров</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">Да</div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name">Габаритные размеры упаковки, см</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">32x60x82</div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name">Вес товара с упаковкой, кг</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">30,5</div>
-                                <div class = "clearfix"></div>
-
-                                <div class = "col-xs-12 col-sm-5 col-md-4 wb-netshop-name">Гарантийный срок</div>
-                                <div class = "col-xs-12 col-sm-7 col-md-7 it-charact-value">12 месяцев</div>
-                                <div class = "clearfix"></div>
+                                <?
+                                    }
+                                    if ($arResult['SHOW_OFFERS_PROPS'])
+                                    {
+                                ?>
+                                    <div id="<? echo $arItemIDs['DISPLAY_PROP_DIV'] ?>" style="display: none;"></div>
+                                <?
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
 
                 </div>
-
+                <?foreach($arResult["PROPERTIES"]["DOCUMENTS"]["VALUE"] as $arFile){
+                    $file = CFile::GetFileArray($arFile);
+                    $file_origin[] = $file;
+                }
+                ?>
                 <div class = "col-xs-12 col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 col-lg-2">
                     <div class = "row">
                         <div class = "col-xs-12 second-header">Документы</div>
                         <div class = "col-xs-12 usually-text">Инструкция по сборке и эксплуатации</div>
-                        <div class = "col-xs-12 it-docum-url"><a target="_blank" href="./documents/Instruction_Nido_Magia.pdf">Instruction_Nido_Magia.pdf</a></div>
+
+                        <div class = "col-xs-12 it-docum-url"><a target="_blank" href="<?=$file_origin[0]["SRC"]?>"><?=$file_origin[0]["ORIGINAL_NAME"]?></a></div>
                         <div class = "col-xs-12 usually-text">Сертификат соответствия</div>
-                        <div class = "col-xs-12 it-docum-url"><a target="_blank" href="./documents/Certificate_Nido_Magia.pdf">Certificate_Nido_Magia.pdf</a></div>
+                        <div class = "col-xs-12 it-docum-url"><a target="_blank" href="<?=$file_origin[1]["SRC"]?>"><?=$file_origin[1]["ORIGINAL_NAME"]?></a></div>
                     </div>
                 </div>
             </div>
