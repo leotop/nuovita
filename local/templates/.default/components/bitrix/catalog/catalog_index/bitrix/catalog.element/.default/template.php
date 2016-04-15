@@ -96,11 +96,11 @@ $this->setFrameMode(true);?>
                 <div class = "hidden-xs hidden-sm col-md-0 col-lg-0"></div>
 
                 <div class = "hidden-xs hidden-sm col-md-12 col-lg-12">
-                     <?$additional_photo = CFile::GetPath($arResult["PROPERTIES"]["item_photos"]["VALUE"][0])?>
-                     <?if($additional_photo){?>
+                     <?$additionalPhoto = CFile::GetPath($arResult["PROPERTIES"]["item_photos"]["VALUE"][0])?>
+                     <?if($additionalPhoto){?>
                     <div class = "row">
                         <div class = "col-md-12 col-lg-12 it-trans-img-1">
-                            <img src="<?=$additional_photo?>">
+                            <img src="<?=$additionalPhoto?>">
                         </div>
                         <div class = "col-md-10 col-md-offset-1">
                             <div class = "row">
@@ -124,11 +124,11 @@ $this->setFrameMode(true);?>
                         </div>
                     </div>
                     <?}?>
-                    <?$additional_photo_2 = CFile::GetPath($arResult["PROPERTIES"]["item_photos"]["VALUE"][0])?>
-                    <?if($additional_photo_2){?>
+                    <?$additionalPhoto2 = CFile::GetPath($arResult["PROPERTIES"]["item_photos"]["VALUE"][0])?>
+                    <?if($additionalPhoto2){?>
                     <div class = "row">
                         <div class = "col-md-12 col-lg-12 it-trans-img-2">
-                            <img src="<?=$additional_photo_2?>">
+                            <img src="<?=$additionalPhoto2?>">
                         </div>
                         <div class = "col-md-10 col-md-offset-1">
                             <div class = "row">
@@ -212,19 +212,19 @@ $this->setFrameMode(true);?>
                 <?if($arResult["PROPERTIES"]["DOCUMENTS"]["VALUE"]){
                 foreach($arResult["PROPERTIES"]["DOCUMENTS"]["VALUE"] as $arFile){
                     $file = CFile::GetFileArray($arFile);
-                    $file_origin[] = $file;
+                    $fileOrigin[] = $file;
                 }
                 ?>
                 <div class = "col-xs-12 col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 col-lg-2">
                     <div class = "row">
                         <div class = "col-xs-12 second-header">Документы</div>
-                        <?if($file_origin[0]["SRC"]){?>
+                        <?if($fileOrigin[0]["SRC"]){?>
                         <div class = "col-xs-12 usually-text">Инструкция по сборке и эксплуатации</div>
-                        <div class = "col-xs-12 it-docum-url"><a target="_blank" href="<?=$file_origin[0]["SRC"]?>"><?=$file_origin[0]["ORIGINAL_NAME"]?></a></div>
+                        <div class = "col-xs-12 it-docum-url"><a target="_blank" href="<?=$fileOrigin[0]["SRC"]?>"><?=$fileOrigin[0]["ORIGINAL_NAME"]?></a></div>
                         <?}
-                        if($file_origin[1]["SRC"]){?>
+                        if($fileOrigin[1]["SRC"]){?>
                         <div class = "col-xs-12 usually-text">Сертификат соответствия</div>
-                        <div class = "col-xs-12 it-docum-url"><a target="_blank" href="<?=$file_origin[1]["SRC"]?>"><?=$file_origin[1]["ORIGINAL_NAME"]?></a></div>
+                        <div class = "col-xs-12 it-docum-url"><a target="_blank" href="<?=$fileOrigin[1]["SRC"]?>"><?=$fileOrigin[1]["ORIGINAL_NAME"]?></a></div>
                         <?}?>
                     </div>
                 </div>
