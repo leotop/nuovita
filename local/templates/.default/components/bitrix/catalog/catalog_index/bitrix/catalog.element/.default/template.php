@@ -14,16 +14,19 @@ $this->setFrameMode(true);?>
             <div class = "row it-tabs">
                 <div class = "col-xs-12 col-sm-12 col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-1">
                     <div class = "row">
-                        <div class = "col-xs-2 col-sm-1 col-sm-offset-2 col-md-2 col-md-offset-0 col-lg-2">
-                            <ul id="tabs-titles" class = "nav">
-                              <?foreach ($arResult['OFFERS'] as $key => $arOneOffer){?>
-                              <?$picture = CFile::GetPath($arOneOffer["COLOR_ITEM"]["DETAIL_PICTURE"]);?>
-                                <li class="nav-title">
-                                    <img src="<?=$picture?>">
-                                </li>
-                             <?}?>
-                            </ul>
-                        </div>
+                        <?if (!empty($arResult["OFFERS"])) {?>
+                                    
+                            <div class = "col-xs-2 col-sm-1 col-sm-offset-2 col-md-2 col-md-offset-0 col-lg-2">
+                                <ul id="tabs-titles" class = "nav">
+                                  <?foreach ($arResult['OFFERS'] as $key => $arOneOffer) {?>
+                                        <?$picture = CFile::GetPath($arOneOffer["COLOR_ITEM"]["DETAIL_PICTURE"]);?>
+                                        <li class="nav-title">
+                                            <img src="<?=$picture?>">
+                                        </li>
+                                  <?}?>
+                                </ul>
+                            </div>
+                        <?}?>
                         <div class = "col-xs-10 col-sm-9 col-md-10 col-lg-10">
                             <ul id="tabs-contents">
                             <?if($arResult['OFFERS']){
@@ -89,75 +92,50 @@ $this->setFrameMode(true);?>
                 <div class = "hidden-xs hidden-sm col-md-1 col-lg-1"></div>
             </div>
 
-            <?if($arResult["PROPERTIES"]["item_photos"]["VALUE"]){?>
-            <div class = "row">
-                <div class = "hidden-xs hidden-sm col-md-12 col-lg-12 item-second-header">¬озможные трансформации</div>
-
-                <div class = "hidden-xs hidden-sm col-md-0 col-lg-0"></div>
-
-                <div class = "hidden-xs hidden-sm col-md-12 col-lg-12">
-                     <?$additionalPhoto = CFile::GetPath($arResult["PROPERTIES"]["item_photos"]["VALUE"][0])?>
-                     <?if($additionalPhoto){?>
+            <?//if (!empty($arResult["PROPERTIES"]["item_photos"]["VALUE"])) {
+                $transformationsList = CIBlockElement::GetList (
+                    array(), 
+                    array(
+                        "IBLOCK_ID" => 11, 
+                        "PROPERTY_ITEM" => $arResult["ID"]
+                    ), 
+                    false, 
+                    false, 
+                    array(
+                        "ID",
+                        "NAME", 
+                        "PROPERTY_ITEM",
+                        "PROPERTY_PICT",
+                        "PROPERTY_AGE_LIMIT"
+                    )
+                );
+                if ($transformationsList -> SelectedRowsCount() > 0) {
+                ?>
                     <div class = "row">
-                        <div class = "col-md-12 col-lg-12 it-trans-img-1">
-                            <img src="<?=$additionalPhoto?>">
-                        </div>
-                        <div class = "col-md-10 col-md-offset-1">
-                            <div class = "row">
-                                <div class = "col-md-3 col-lg-3">
-                                    <div class = "col-md-12 col-lg-12 it-trans-header"> олыбель</div>
-                                    <div class = "col-md-12 col-lg-12 it-trans-age">0Ц6 мес€цев</div>
-                                </div>
-                                <div class = "col-md-3 col-lg-3">
-                                    <div class = "col-md-12 col-lg-12 it-trans-header">ѕеленальный столик</div>
-                                    <div class = "col-md-12 col-lg-12 it-trans-age">0Ц9 мес€цев</div>
-                                </div>
-                                <div class = "col-md-3 col-lg-3">
-                                    <div class = "col-md-12 col-lg-12 it-trans-header"> роватка</div>
-                                    <div class = "col-md-12 col-lg-12 it-trans-age">0Ц2 года</div>
-                                </div>
-                                <div class = "col-md-3 col-lg-3">
-                                    <div class = "col-md-12 col-lg-12 it-trans-header">ѕриставна€ кровать</div>
-                                    <div class = "col-md-12 col-lg-12 it-trans-age">1Ц2 года</div>
-                                </div>
+                        <div class = "hidden-xs hidden-sm col-md-12 col-lg-12 item-second-header">¬озможные трансформации</div>
+
+                        <div class = "hidden-xs hidden-sm col-md-0 col-lg-0"></div>
+                        
+                        <div class = "hidden-xs hidden-sm col-md-12 col-lg-12">
+                            <div class = "row photos_list">
+                                <?while ($transformations = $transformationsList -> Fetch()) {?>
+
+                                        <?$additionalPhoto = CFile::GetPath($transformations["PROPERTY_PICT_VALUE"]);?>
+                                        <?if($additionalPhoto) {?>
+                                            <div class = "col-md-12 col-lg-12 it-trans-img-1">
+                                                <img src="<?=$additionalPhoto?>">
+                                                <div class = "col-md-12 col-lg-12 it-trans-header"><?=$transformations["NAME"]?></div>
+                                                <div class = "col-md-12 col-lg-12 it-trans-age"><?=$transformations["PROPERTY_AGE_LIMIT_VALUE"]?></div>
+                                            </div>
+                                        <?}?>
+
+                                    <div class = "hidden-xs hidden-sm col-md-0 col-lg-0"></div>
+
+                                <?}?>
                             </div>
                         </div>
                     </div>
-                    <?}?>
-                    <?$additionalPhoto2 = CFile::GetPath($arResult["PROPERTIES"]["item_photos"]["VALUE"][0])?>
-                    <?if($additionalPhoto2){?>
-                    <div class = "row">
-                        <div class = "col-md-12 col-lg-12 it-trans-img-2">
-                            <img src="<?=$additionalPhoto2?>">
-                        </div>
-                        <div class = "col-md-10 col-md-offset-1">
-                            <div class = "row">
-                                <div class = "col-md-3 col-lg-3">
-                                    <div class = "col-md-12 col-lg-12 it-trans-header">ћанеж</div>
-                                    <div class = "col-md-12 col-lg-12 it-trans-age">9Ц18 мес€цев</div>
-                                </div>
-                                <div class = "col-md-3 col-lg-3">
-                                    <div class = "col-md-12 col-lg-12 it-trans-header">ƒиванчик</div>
-                                    <div class = "col-md-12 col-lg-12 it-trans-age">2Ц3 года</div>
-                                </div>
-                                <div class = "col-md-3 col-lg-3">
-                                    <div class = "col-md-12 col-lg-12 it-trans-header"> ресла и столик</div>
-                                    <div class = "col-md-12 col-lg-12 it-trans-age">3Ц9 лет</div>
-                                </div>
-                                <div class = "col-md-3 col-lg-3">
-                                    <div class = "col-md-12 col-lg-12 it-trans-header">ѕодросткова€ кровать</div>
-                                    <div class = "col-md-12 col-lg-12 it-trans-age">3Ц9 лет</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  <?}?>
-                </div>
-
-                <div class = "hidden-xs hidden-sm col-md-0 col-lg-0"></div>
-
-            </div>
-            <?}?>
+                            <?}?>
 
             <div class = "row it-character">
 
@@ -195,12 +173,12 @@ $this->setFrameMode(true);?>
                                 ?>
                                     </div>
                                 <?
-                                    }
+                                    
                                     if ($arResult['SHOW_OFFERS_PROPS'])
                                     {
                                 ?>
                                     <div id="<? echo $arItemIDs['DISPLAY_PROP_DIV'] ?>" style="display: none;"></div>
-
+                                    <?}?>
                         </div>
                     </div>
 
@@ -229,4 +207,4 @@ $this->setFrameMode(true);?>
                     </div>
                 </div>
                 <?}?>
-            </div>
+            </div> 

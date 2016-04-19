@@ -651,7 +651,7 @@ h4 {
 			opacity: 0.2;
 		}
 
-		/*Инфо о магазинах на главной*/
+		/*�?нфо о магазинах на главной*/
 		.wb-buy {background-color: #fafafa;}
 
 		.main-shops {
@@ -1841,7 +1841,7 @@ h4 {
 			opacity: 0.2;
 		}
 
-		/*Инфо о магазинах на главной*/
+		/*�?нфо о магазинах на главной*/
 		.wb-buy {background-color: #fafafa;}
 
 		.main-shops {
@@ -3032,7 +3032,7 @@ h4 {
 			opacity: 0.2;
 		}
 
-		/*Инфо о магазинах на главной*/
+		/*�?нфо о магазинах на главной*/
 		.wb-buy {background-color: #fafafa;}
 
 		.main-shops {
@@ -4304,7 +4304,7 @@ h4 {
 			opacity: 0.2;
 		}
 
-		/*Инфо о магазинах на главной*/
+		/*�?нфо о магазинах на главной*/
 		.wb-buy {background-color: #fafafa;}
 
 		.main-shops {
@@ -4931,7 +4931,7 @@ h4 {
 		}
 
 		.it-tabs .content {
-			position: absolute;
+			/*position: absolute;*/
 		}
 
 		.it-tabs .content img {
@@ -5047,8 +5047,13 @@ h4 {
 			display: table;
 		}
 
+        .it-trans-img-1 {
+            width: 278px;
+        }
+        
 		.it-trans-img-1 img {
-			width:100%;
+			/*width:100%; */
+            width: 278px;
 		}
 
 		.it-trans-img-2 img {
