@@ -3777,9 +3777,13 @@ h4 {
             min-height: 21.9em;
             display: table;
         }
-
+        .it-trans-img-1 {
+            width: 278px;
+        }
+        
         .it-trans-img-1 img {
-            width: 100%;
+            /*width: 100%;  */
+            width: 278px;
         }
 
         .it-trans-img-2 img {
@@ -5198,6 +5202,7 @@ h4 {
 }
 .bx_catalog_list_home .bx_catalog_item:nth-child(odd) .left_text{
     float: right;
+    width: 50%;
 }
 .left_text a{
     color: #d5b1d4;
