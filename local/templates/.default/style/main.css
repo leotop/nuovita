@@ -4935,7 +4935,7 @@ h4 {
         }
 
         .it-tabs .content {
-            /*position: absolute;*/
+            position: absolute;
         }
 
         .it-tabs .content img {

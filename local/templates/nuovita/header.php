@@ -6,6 +6,13 @@ IncludeTemplateLangFile(__FILE__);
 <!DOCTYPE HTML>
 <html>
 <head>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src = "/local/templates/.default/js/bootstrap.min.js"></script>
+    <script src="/local/templates/.default/plugins/slider/responsiveslides.min.js"></script>
+    <script src="/local/templates/.default/plugins/form-button/form_button.min.js"></script>
+    <script src="/local/templates/.default/plugins/swipebox-master/jquery.swipebox.min.js"></script>
+    <script type="text/javascript" src = "/local/templates/.default/plugins/social-nets/goodshare.min.js"></script>
+    
 	<?$APPLICATION->ShowHead();?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>

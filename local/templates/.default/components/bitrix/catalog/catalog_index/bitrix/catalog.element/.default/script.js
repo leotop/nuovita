@@ -2841,3 +2841,9 @@ window.JCCatalogElement.prototype.allowViewedCount = function(update)
 	}
 };
 })(window);
+
+$(document).ready(function() {
+    if ($("#tabs-contents li .content").height() > $(".it-tabs").height()) {
+        $(".it-tabs").css("height", $("#tabs-contents li .content").height());
+    }
+});
