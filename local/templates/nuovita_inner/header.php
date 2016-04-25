@@ -23,6 +23,7 @@ IncludeTemplateLangFile(__FILE__);
     <link rel="stylesheet" type="text/css" href="/local/templates/.default/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/local/templates/.default/style/main.css" media = "screen">
     <link rel="stylesheet" type="text/css" href="/local/templates/.default/style/form_button.css" media = "screen">
+    <link rel="stylesheet" href="/local/templates/.default/plugins/swipebox-master/swipebox.css">
 
 </head>
 <body>

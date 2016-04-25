@@ -106,7 +106,8 @@ $this->setFrameMode(true);?>
                         "NAME", 
                         "PROPERTY_ITEM",
                         "PROPERTY_PICT",
-                        "PROPERTY_AGE_LIMIT"
+                        "PROPERTY_AGE_LIMIT",
+                        "PROPERTY_SHOW_NOTE"
                     )
                 );
                 if ($transformationsList -> SelectedRowsCount() > 0) {
@@ -124,8 +125,14 @@ $this->setFrameMode(true);?>
                                         <?if($additionalPhoto) {?>
                                             <div class = "col-md-12 col-lg-12 it-trans-img-1">
                                                 <img src="<?=$additionalPhoto?>">
-                                                <div class = "col-md-12 col-lg-12 it-trans-header"><?=$transformations["NAME"]?></div>
-                                                <div class = "col-md-12 col-lg-12 it-trans-age"><?=$transformations["PROPERTY_AGE_LIMIT_VALUE"]?></div>
+                                                <?
+                                                if ($transformations["PROPERTY_SHOW_NOTE_VALUE"]) {
+                                                ?>
+                                                    <div class = "col-md-12 col-lg-12 it-trans-header"><?=$transformations["NAME"]?></div>
+                                                    <div class = "col-md-12 col-lg-12 it-trans-age"><?=$transformations["PROPERTY_AGE_LIMIT_VALUE"]?></div>
+                                                <?
+                                                }
+                                                ?>
                                             </div>
                                         <?}?>
 
