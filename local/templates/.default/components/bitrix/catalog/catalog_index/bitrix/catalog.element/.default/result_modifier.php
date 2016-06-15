@@ -310,6 +310,7 @@ if ($arResult['CATALOG'] && isset($arResult['OFFERS']) && !empty($arResult['OFFE
 	$arDouble = array();
 	foreach ($arResult['OFFERS'] as $keyOffer => $arOffer)
 	{
+
 		$arOffer['ID'] = (int)$arOffer['ID'];
 		if (isset($arDouble[$arOffer['ID']]))
 			continue;
@@ -365,6 +366,10 @@ if ($arResult['CATALOG'] && isset($arResult['OFFERS']) && !empty($arResult['OFFE
 		}
 
 		$arDouble[$arOffer['ID']] = true;
+
+        $color = CIBlockElement::GetByID($arOffer["PROPERTIES"]["COLOR"]["VALUE"])->GetNext();
+        $arOffer["COLOR_ITEM"] = $color;
+
 		$arNewOffers[$keyOffer] = $arOffer;
 	}
 	$arResult['OFFERS'] = $arNewOffers;

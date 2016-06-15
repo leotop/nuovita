@@ -6,16 +6,24 @@ IncludeTemplateLangFile(__FILE__);
 <!DOCTYPE HTML>
 <html>
 <head>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src = "/local/templates/.default/js/bootstrap.min.js"></script>
+    <script src="/local/templates/.default/plugins/slider/responsiveslides.min.js"></script>
+    <script src="/local/templates/.default/plugins/form-button/form_button.min.js"></script>
+    <script src="/local/templates/.default/plugins/swipebox-master/jquery.swipebox.min.js"></script>
+    <script type="text/javascript" src = "/local/templates/.default/plugins/social-nets/goodshare.min.js"></script>
+    
 	<?$APPLICATION->ShowHead();?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>
     <meta charset = "utf-8">
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/plugins/slider/responsiveslides.css">
+    <link rel="stylesheet" type="text/css" href="/local/templates/.default/plugins/slider/responsiveslides.css">
 	<meta name = "format-detection" content = "telephone=no" />
-    <link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/style/main.css" media = "screen">
-    <link rel="stylesheet" type="text/css" href="/bitrix/templates/.default/style/form_button.css" media = "screen">
+    <link rel="stylesheet" type="text/css" href="/local/templates/.default/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/local/templates/.default/style/main.css" media = "screen">
+    <link rel="stylesheet" type="text/css" href="/local/templates/.default/style/form_button.css" media = "screen">
+    <link rel="stylesheet" href="/local/templates/.default/plugins/swipebox-master/swipebox.css">
 
 </head>
 <body>
@@ -94,7 +102,7 @@ IncludeTemplateLangFile(__FILE__);
                     <div class = "row">
                         <div class = "col-md-2 visible-md visible-lg">
                             <a href="/" class = "logo">
-                                <img src="/bitrix/templates/.default/img/main/logo.png">
+                                <img src="/local/templates/.default/img/main/logo.png">
                             </a>
                         </div>
                         <div class = "col-xs-12 col-md-10 header-link-2">

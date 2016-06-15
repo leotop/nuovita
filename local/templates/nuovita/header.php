@@ -6,6 +6,7 @@ IncludeTemplateLangFile(__FILE__);
 <!DOCTYPE HTML>
 <html>
 <head>
+
 	<?$APPLICATION->ShowHead();?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>
@@ -192,6 +193,7 @@ IncludeTemplateLangFile(__FILE__);
 	                        ),
 	                        false
                         );?>
+
 			</div>
             <div class = "row">
                 <?$APPLICATION->IncludeFile(
@@ -202,8 +204,8 @@ IncludeTemplateLangFile(__FILE__);
                  ?>
             </div>
                 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section", 
-	"categories_list_template", 
+	"bitrix:catalog.section",
+	"categories_list_template",
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_PICT_PROP" => "-",
@@ -264,10 +266,10 @@ IncludeTemplateLangFile(__FILE__);
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "",
 		"PROPERTY_CODE" => array(
-			0 => "",
+			0 => "items",
 			1 => "",
 		),
-		"SECTION_CODE" => "",
+		"SECTION_CODE" => $_REQUEST["SECTION_CODE"],
 		"SECTION_ID" => $_REQUEST["SECTION_ID"],
 		"SECTION_ID_VARIABLE" => "SECTION_ID",
 		"SECTION_URL" => "",
@@ -275,7 +277,7 @@ IncludeTemplateLangFile(__FILE__);
 			0 => "",
 			1 => "",
 		),
-		"SEF_MODE" => "N",
+		"SEF_MODE" => "Y",
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -295,7 +297,9 @@ IncludeTemplateLangFile(__FILE__);
 		"SHOW_OLD_PRICE" => "N",
 		"SHOW_CLOSE_POPUP" => "N",
 		"CONVERT_CURRENCY" => "N",
-		"ADD_TO_BASKET_ACTION" => "ADD"
+		"ADD_TO_BASKET_ACTION" => "ADD",
+		"SEF_RULE" => "#SECTION_CODE#",
+		"SECTION_CODE_PATH" => ""
 	),
 	false
 );?>

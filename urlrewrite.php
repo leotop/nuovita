@@ -7,6 +7,12 @@ $arUrlRewrite = array(
 		"PATH" => "/bitrix/services/ymarket/index.php",
 	),
 	array(
+		"CONDITION" => "#^([^/]+?)\\??(.*)#",
+		"RULE" => "SECTION_CODE=\$1&\$2",
+		"ID" => "bitrix:catalog.section",
+		"PATH" => "/local/templates/nuovita/header.php",
+	),
+	array(
 		"CONDITION" => "#^/products/#",
 		"RULE" => "",
 		"ID" => "bitrix:catalog",
@@ -17,6 +23,12 @@ $arUrlRewrite = array(
 		"RULE" => "",
 		"ID" => "bitrix:catalog",
 		"PATH" => "/services/index.php",
+	),
+	array(
+		"CONDITION" => "#^/catalog/#",
+		"RULE" => "",
+		"ID" => "bitrix:catalog",
+		"PATH" => "/catalog/index.php",
 	),
 	array(
 		"CONDITION" => "#^/news/#",
