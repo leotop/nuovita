@@ -2,7 +2,7 @@
 $this->setFrameMode(true);
 
 
-$i = 0; # ÑÑ‡Ñ‘Ñ‚Ñ‡Ð¸Ðº, Ñ‡Ñ‚Ð¾Ð±Ñ‹ ÑÑ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ Ñ‡Ð¸ÑÐ»Ð¾ ÑÑ‚Ñ€Ð¾Ðº
+$i = 0; # ñ÷¸ò÷èê, ÷òîáû ñ÷èòàòü ÷èñëî ñòðîê
 if (!empty($arResult['ITEMS']))
 {
     foreach ($arResult['ITEMS'] as $key => $arItem)
@@ -11,12 +11,12 @@ if (!empty($arResult['ITEMS']))
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strElementDelete, $arElementDeleteParams);
         $strMainID = $this->GetEditAreaId($arItem['ID']);
 
-        if($i>=3)
-        {
+        if($i>=5)
+        {   arshow($i);
             $i = 0;
         }
 
-        # Ð²ÑÑ‚Ð°Ð²Ð»ÑÐµÐ¼ Ð¾Ð±ÐµÑ€Ñ‚ÐºÑƒ-ÑÑ‚Ñ€Ð¾ÐºÑƒ
+        # âñòàâëÿåì îáåðòêó-ñòðîêó
         if($i == 0)
         {
             ?>
@@ -88,8 +88,8 @@ if (!empty($arResult['ITEMS']))
 
    <?
 
-        # Ð²ÑÑ‚Ð°Ð²Ð»ÑÐµÐ¼ Ð¾Ð±ÐµÑ€Ñ‚ÐºÑƒ-ÑÑ‚Ñ€Ð¾ÐºÑƒ
-        if($i >= 2)
+        # âñòàâëÿåì îáåðòêó-ñòðîêó
+        if($i >= 5)
         {
             ?>
             </div>
@@ -99,14 +99,14 @@ if (!empty($arResult['ITEMS']))
         $i++;
     }
 
-        while($i < 3)
+        while($i < 5)
         {
             ?>
             <div class = "col-xs-12 col-sm-6 col-md-4 col-lg-4">
                 <br>
             </div>
             <?
-            # Ð²ÑÑ‚Ð°Ð²Ð»ÑÐµÐ¼ Ð¾Ð±ÐµÑ€Ñ‚ÐºÑƒ-ÑÑ‚Ñ€Ð¾ÐºÑƒ
+            # âñòàâëÿåì îáåðòêó-ñòðîêó
             if($i >= 2)
             {
                 ?>
