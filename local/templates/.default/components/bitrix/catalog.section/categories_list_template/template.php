@@ -87,10 +87,8 @@ if (!empty($arResult['ITEMS']))
         </div>
 
    <?
-
         # вставляем обертку-строку
-        if($i >= 5)
-        {
+        if($i >= 5) {
             ?>
             </div>
             <?
@@ -99,16 +97,14 @@ if (!empty($arResult['ITEMS']))
         $i++;
     }
 
-        while($i < 5)
-        {
+        while($i < 5) {
             ?>
             <div class = "col-xs-12 col-sm-6 col-md-4 col-lg-4">
                 <br>
             </div>
             <?
             # вставляем обертку-строку
-            if($i >= 2)
-            {
+            if($i >= 2) {
                 ?>
                 </div>
                 <?
