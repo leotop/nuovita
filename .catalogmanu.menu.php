@@ -1,7 +1,7 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Кроватки", 
+		"Кроватка", 
 		"/catalog/krovatki/", 
 		Array(), 
 		Array(), 
@@ -24,6 +24,13 @@ $aMenuLinks = Array(
 	Array(
 		"Стульчики", 
 		"/catalog/stulchiki/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Электрокачели", 
+		"/catalog/elektrokacheli/", 
 		Array(), 
 		Array(), 
 		"" 
