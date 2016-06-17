@@ -12,7 +12,7 @@ if (!empty($arResult['ITEMS']))
         $strMainID = $this->GetEditAreaId($arItem['ID']);
 
         if($i>=5)
-        {   arshow($i);
+        {
             $i = 0;
         }
 
