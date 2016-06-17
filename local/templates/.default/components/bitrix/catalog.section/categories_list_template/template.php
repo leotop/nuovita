@@ -2,23 +2,19 @@
 $this->setFrameMode(true);
 
 
-$i = 0; # ÑÑ‡Ñ‘Ñ‚Ñ‡Ð¸Ðº, Ñ‡Ñ‚Ð¾Ð±Ñ‹ ÑÑ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ Ñ‡Ð¸ÑÐ»Ð¾ ÑÑ‚Ñ€Ð¾Ðº
-if (!empty($arResult['ITEMS']))
-{
-    foreach ($arResult['ITEMS'] as $key => $arItem)
-    {
+$i = 0; # ñ÷¸ò÷èê, ÷òîáû ñ÷èòàòü ÷èñëî ñòðîê
+if (!empty($arResult['ITEMS'])) {
+    foreach ($arResult['ITEMS'] as $key => $arItem) {
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strElementEdit);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strElementDelete, $arElementDeleteParams);
         $strMainID = $this->GetEditAreaId($arItem['ID']);
 
-        if($i>=3)
-        {
+        if($i>=5) {
             $i = 0;
         }
 
-        # Ð²ÑÑ‚Ð°Ð²Ð»ÑÐµÐ¼ Ð¾Ð±ÐµÑ€Ñ‚ÐºÑƒ-ÑÑ‚Ñ€Ð¾ÐºÑƒ
-        if($i == 0)
-        {
+        # âñòàâëÿåì îáåðòêó-ñòðîêó
+        if($i == 0) {
             ?>
             <div class = "row main-stuff">
             <?
@@ -72,8 +68,7 @@ if (!empty($arResult['ITEMS']))
                     <div class = "second-header text-center"><? echo $productTitle; ?></div>
                     <div class = "third-header text-center"><?=$arItem["PREVIEW_TEXT"]?></div>
                     <?
-                    if ($arItem['SECOND_PICT'])
-                    {
+                    if ($arItem['SECOND_PICT']) {
                         ?>
                         <img src="<? echo (
                             !empty($arItem['PREVIEW_PICTURE_SECOND'])
@@ -87,10 +82,8 @@ if (!empty($arResult['ITEMS']))
         </div>
 
    <?
-
-        # Ð²ÑÑ‚Ð°Ð²Ð»ÑÐµÐ¼ Ð¾Ð±ÐµÑ€Ñ‚ÐºÑƒ-ÑÑ‚Ñ€Ð¾ÐºÑƒ
-        if($i >= 2)
-        {
+        # âñòàâëÿåì îáåðòêó-ñòðîêó
+        if($i >= 5) {
             ?>
             </div>
             <?
@@ -99,16 +92,14 @@ if (!empty($arResult['ITEMS']))
         $i++;
     }
 
-        while($i < 3)
-        {
+        while($i < 5) {
             ?>
             <div class = "col-xs-12 col-sm-6 col-md-4 col-lg-4">
                 <br>
             </div>
             <?
-            # Ð²ÑÑ‚Ð°Ð²Ð»ÑÐµÐ¼ Ð¾Ð±ÐµÑ€Ñ‚ÐºÑƒ-ÑÑ‚Ñ€Ð¾ÐºÑƒ
-            if($i >= 2)
-            {
+            # âñòàâëÿåì îáåðòêó-ñòðîêó
+            if($i >= 2) {
                 ?>
                 </div>
                 <?
