@@ -3,22 +3,18 @@ $this->setFrameMode(true);
 
 
 $i = 0; # счётчик, чтобы считать число строк
-if (!empty($arResult['ITEMS']))
-{
-    foreach ($arResult['ITEMS'] as $key => $arItem)
-    {
+if (!empty($arResult['ITEMS'])) {
+    foreach ($arResult['ITEMS'] as $key => $arItem) {
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], $strElementEdit);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], $strElementDelete, $arElementDeleteParams);
         $strMainID = $this->GetEditAreaId($arItem['ID']);
 
-        if($i>=5)
-        {
+        if($i>=5) {
             $i = 0;
         }
 
         # вставляем обертку-строку
-        if($i == 0)
-        {
+        if($i == 0) {
             ?>
             <div class = "row main-stuff">
             <?
@@ -72,8 +68,7 @@ if (!empty($arResult['ITEMS']))
                     <div class = "second-header text-center"><? echo $productTitle; ?></div>
                     <div class = "third-header text-center"><?=$arItem["PREVIEW_TEXT"]?></div>
                     <?
-                    if ($arItem['SECOND_PICT'])
-                    {
+                    if ($arItem['SECOND_PICT']) {
                         ?>
                         <img src="<? echo (
                             !empty($arItem['PREVIEW_PICTURE_SECOND'])
