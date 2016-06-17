@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Где купить");
+$APPLICATION->SetTitle("Магазины");
 ?><div class="row wb-large-row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="row wb">
@@ -12,7 +12,7 @@ $APPLICATION->SetTitle("Где купить");
 									Текст о сотрудничестве
 								</div>
 								<div class = "col-xs-12 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0 wb-cooperation-text">
-									<!-- Контакты, инфо о компании Амата, региональный дилер (Краснодар). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. 
+									<!-- Контакты, инфо о компании Амата, региональный дилер (Краснодар). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
 								</div>
 							</div>-->
 				<div class="row">
