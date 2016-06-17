@@ -141,6 +141,14 @@ $APPLICATION->SetTitle("Где купить");
 							</div>
 							<div class="clearfix">
 							</div>
+<div class="col-xs-12 col-sm-6 col-md-5 wb-netshop-shopname">
+								 Colibri&Lilly
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-5 wb-netshop-url">
+ <a target="_blank" href="http://www.colibri-lilly.ru/">www.colibri-lilly.ru</a>
+							</div>
+							<div class="clearfix">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -307,6 +315,42 @@ $APPLICATION->SetTitle("Где купить");
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-phone">
 										 +7 918 987 87 03
+									</div>
+								</div>
+							</div>
+							<div class="clearfix wb-margin">
+							</div>
+					<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-name">
+								 Мебельный торговый центр "Гранд-2"
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
+										г. Химки, Бутаково 4, секция детской мебели, модуль "Colibri&Lilly"
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
+										 Пн-Вс: 11:00 – 20:00
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-phone">
+										 +7 499 755 79 05 
+									</div>
+								</div>
+							</div>
+							<div class="clearfix wb-margin">
+							</div>
+<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-name">
+								 ТК "Три Кита"
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
+										Можайское шоссе, 2 км от МКАД (в сторону области), модуль "Cleveroom"
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
+										 Пн-Вс: 10:00 – 21:00
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-phone">
+										 +7 499 390-20-99 
 									</div>
 								</div>
 							</div>
