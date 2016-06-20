@@ -12,9 +12,9 @@ $APPLICATION->SetTitle("item");
 	<br>
 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.element",
-	"single_item_template",
-	Array(
+	"bitrix:catalog.element", 
+	"single_item_template", 
+	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_DETAIL_TO_SLIDER" => "N",
 		"ADD_ELEMENT_CHAIN" => "N",
@@ -29,7 +29,7 @@ $APPLICATION->SetTitle("item");
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
 		"CHECK_SECTION_ID_VARIABLE" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "single_item_template",
 		"DETAIL_PICTURE_MODE" => "IMG",
 		"DETAIL_URL" => "element.php?IBLOCK_ID=#IBLOCK_ID#&SECTION_ID=#SECTION_ID#&ELEMENT_ID=#ELEMENT_ID#",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
@@ -39,8 +39,8 @@ $APPLICATION->SetTitle("item");
 		"DISPLAY_PREVIEW_TEXT_MODE" => "E",
 		"ELEMENT_CODE" => "",
 		"ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
-		"IBLOCK_ID" => "7",
-		"IBLOCK_TYPE" => "item",
+		"IBLOCK_ID" => "6",
+		"IBLOCK_TYPE" => "index_slider",
 		"LABEL_PROP" => "-",
 		"LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
 		"LINK_IBLOCK_ID" => "32",
@@ -56,14 +56,20 @@ $APPLICATION->SetTitle("item");
 		"META_KEYWORDS" => "-",
 		"OFFERS_LIMIT" => "0",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => "",
+		"PRICE_CODE" => array(
+		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"PRODUCT_ID_VARIABLE" => "id",
-		"PRODUCT_PROPERTIES" => "",
+		"PRODUCT_PROPERTIES" => array(
+		),
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "",
-		"PROPERTY_CODE" => array(0=>"",1=>"PAGES",2=>"",),
+		"PROPERTY_CODE" => array(
+			0 => "details_link",
+			1 => "PAGES",
+			2 => "",
+		),
 		"SECTION_CODE" => "",
 		"SECTION_ID" => $_REQUEST["SECTION_ID"],
 		"SECTION_ID_VARIABLE" => "SECTION_ID",
@@ -85,8 +91,20 @@ $APPLICATION->SetTitle("item");
 		"USE_MAIN_ELEMENT_SECTION" => "N",
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
-		"USE_VOTE_RATING" => "N"
-	)
+		"USE_VOTE_RATING" => "N",
+		"HIDE_NOT_AVAILABLE" => "N",
+		"PRODUCT_SUBSCRIPTION" => "N",
+		"SHOW_DISCOUNT_PERCENT" => "N",
+		"SHOW_OLD_PRICE" => "N",
+		"SHOW_MAX_QUANTITY" => "N",
+		"SHOW_CLOSE_POPUP" => "N",
+		"CONVERT_CURRENCY" => "N",
+		"ADD_TO_BASKET_ACTION" => array(
+			0 => "BUY",
+		),
+		"SET_VIEWED_IN_COMPONENT" => "N"
+	),
+	false
 );?><br>
  <br>
 </div>
