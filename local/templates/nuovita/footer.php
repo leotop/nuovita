@@ -114,6 +114,13 @@ IncludeTemplateLangFile(__FILE__);
 </div>
 </div>
 
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src = "./js/bootstrap.min.js"></script>
+
+<script src="./plugins/slider/responsiveslides.min.js"></script>
+
+<script src="./plugins/form-button/form_button.min.js"></script>
 <script type="text/javascript">
     /*$(".rslides").responsiveSlides({
      auto: true,             // Boolean: Animate automatically, true or false
