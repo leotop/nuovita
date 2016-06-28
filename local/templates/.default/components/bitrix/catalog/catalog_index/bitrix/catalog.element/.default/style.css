@@ -981,3 +981,18 @@
 .photos_list {
     margin-left: 9% !important;
 }
+.it-tabs .row > .goodshare-color{
+     clear: left;
+}
+.it-tabs .row > span{
+    text-align: center;
+    width: 202px;
+    float: left;
+}
+.supplementary_photo > h2{
+    text-align: center;
+}
+.addetional_description{
+    margin: 30px auto 0px;
+    width: 760px;
+}
