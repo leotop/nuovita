@@ -15,7 +15,7 @@ $this->setFrameMode(true);?>
                 <div class = "col-xs-12 col-sm-12 col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-1">
                     <div class = "row">
                         <?if (!empty($arResult["OFFERS"])) {?>
-                                    
+
                             <div class = "col-xs-2 col-sm-1 col-sm-offset-2 col-md-2 col-md-offset-0 col-lg-2">
                                 <ul id="tabs-titles" class = "nav">
                                   <?foreach ($arResult['OFFERS'] as $key => $arOneOffer) {?>
@@ -83,7 +83,7 @@ $this->setFrameMode(true);?>
                                     <a href="#" class="goodshare" data-type="mr"><img src="/local/templates/.default/img/item/social.png"></a>
                                 </div>
                                 <div class = "col-xs-12 col-sm-12 col-md-5 col-lg-6 it-descript-shop">
-                                    <a href="/gde-kupit/">Найти магазин</a>
+                                    <a href="/magaziny/">Найти магазин</a>
                                 </div>
                             </div>
                         </div>
@@ -94,16 +94,16 @@ $this->setFrameMode(true);?>
 
             <?//if (!empty($arResult["PROPERTIES"]["item_photos"]["VALUE"])) {
                 $transformationsList = CIBlockElement::GetList (
-                    array(), 
+                    array(),
                     array(
-                        "IBLOCK_ID" => 11, 
+                        "IBLOCK_ID" => 11,
                         "PROPERTY_ITEM" => $arResult["ID"]
-                    ), 
-                    false, 
-                    false, 
+                    ),
+                    false,
+                    false,
                     array(
                         "ID",
-                        "NAME", 
+                        "NAME",
                         "PROPERTY_ITEM",
                         "PROPERTY_PICT",
                         "PROPERTY_AGE_LIMIT",
@@ -116,7 +116,7 @@ $this->setFrameMode(true);?>
                         <div class = "hidden-xs hidden-sm col-md-12 col-lg-12 item-second-header">Возможные трансформации</div>
 
                         <div class = "hidden-xs hidden-sm col-md-0 col-lg-0"></div>
-                        
+
                         <div class = "hidden-xs hidden-sm col-md-12 col-lg-12">
                             <div class = "row photos_list">
                                 <?while ($transformations = $transformationsList -> Fetch()) {?>
@@ -180,7 +180,7 @@ $this->setFrameMode(true);?>
                                 ?>
                                     </div>
                                 <?
-                                    
+
                                     if ($arResult['SHOW_OFFERS_PROPS'])
                                     {
                                 ?>
@@ -214,4 +214,4 @@ $this->setFrameMode(true);?>
                     </div>
                 </div>
                 <?}?>
-            </div> 
+            </div>
