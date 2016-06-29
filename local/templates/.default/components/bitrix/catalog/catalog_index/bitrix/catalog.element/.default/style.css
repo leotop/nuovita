@@ -989,10 +989,13 @@
     width: 202px;
     float: left;
 }
+.supplementary_photo{
+    text-align: center;
+}
 .supplementary_photo > h2{
     text-align: center;
 }
 .addetional_description{
     margin: 30px auto 0px;
-    width: 760px;
+    width: 67%;
 }
