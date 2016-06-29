@@ -142,7 +142,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="clearfix">
 							</div>
 <div class="col-xs-12 col-sm-6 col-md-5 wb-netshop-shopname">
-								 Colibri&Lilly
+								 Colibri&amp;Lilly
 							</div>
 							<div class="col-xs-12 col-sm-6 col-md-5 wb-netshop-url">
  <a target="_blank" href="http://www.colibri-lilly.ru/">www.colibri-lilly.ru</a>
@@ -164,7 +164,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
-										 г. Москва, ул. Сущевский вал, д. 5, стр. 1, 1 этаж, пав. М08
+										 г.&nbsp;Москва, ул.&nbsp;Сущевский вал, д.&nbsp;5,&nbsp;стр.&nbsp;1, 1&nbsp;этаж, пав.&nbsp;М08
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
 										 Пн-Вс: 10:00 – 21:00
@@ -182,7 +182,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
-										 г. Москва, Варшавское шоссе, д. 95, к. 1, 2 этаж, магазин «Детский»
+										 г.&nbsp;Москва, Варшавское&nbsp;шоссе, д.&nbsp;95,&nbsp;к.&nbsp;1, 2&nbsp;этаж, магазин&nbsp;«Детский»
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
 										 Пн-Вс: 10:00 – 22:00
@@ -200,7 +200,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
-										 г. Москва, ул. Подъемная, д. 14, стр. 37
+										 г. Москва, ул.&nbsp;Подъемная, д.&nbsp;14,&nbsp;стр.&nbsp;37
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
 										 Пн-Пт: 10:00 – 19:00
@@ -218,7 +218,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 col-xs-12 col-sm-12 col-md-12 wb-shop-address">
-										 г. Екатеринбург, ул. Розы Люксембург, д. 34
+										 г.&nbsp;Екатеринбург, ул.&nbsp;Розы Люксембург, д.&nbsp;34
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 col-xs-12 col-sm-12 col-md-12 wb-shop-time">
 										 Пн-Пт: 11:00 – 19:00
@@ -236,7 +236,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
-										 г. Ростов-на-Дону, ул. Кольцевая 3-я, д. 58 Б, 1 этаж
+										 г.&nbsp;Ростов-на-Дону, ул.&nbsp;Кольцевая&nbsp;3-я, д.&nbsp;58&nbsp;Б, 1&nbsp;этаж
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
 										 Пн-Пт: 9:00 – 18:00
@@ -254,7 +254,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
-										 г. Пятигорск, Георгиевское шоссе, 1 км, рынок  «Кавминводский»
+										 г.&nbsp;Пятигорск, Георгиевское&nbsp;шоссе,&nbsp;1&nbsp;км, рынок&nbsp;&nbsp;«Кавминводский»
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
 										 Пн-Пт: 9:00 – 18:00
@@ -272,7 +272,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
-										 г. Симферополь, ул. Пушкина, д. 3
+										 г.&nbsp;Симферополь, ул.&nbsp;Пушкина, д.&nbsp;3
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
 										 Пн-Пт: 9:00 – 19:00, Сб: 10:00 – 18:00
@@ -290,7 +290,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
-										 г. Майкоп, ул. Пролетарская, д. 2
+										 г.&nbsp;Майкоп, ул.&nbsp;Пролетарская, д.&nbsp;2
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
 										 Пн-Пт: 10:00 – 18:00
@@ -308,7 +308,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
-										 г. Анапа, ул. Ленина, д. 144 Б
+										 г.&nbsp;Анапа, ул.&nbsp;Ленина, д.&nbsp;144&nbsp;Б
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
 										 Пн-Вс: 9:00 – 20:00
@@ -326,7 +326,7 @@ $APPLICATION->SetTitle("Магазины");
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 wb-shop-info">
 								<div class="row">
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-address">
-										г. Химки, Бутаково 4, секция детской мебели, модуль "Colibri&Lilly"
+										г. Химки, Бутаково 4, секция детской мебели, модуль "Colibri&amp;Lilly"
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 wb-shop-time">
 										 Пн-Вс: 11:00 – 20:00

@@ -75,7 +75,9 @@ $this->setFrameMode(true);?>
 
                         <div class = "col-xs-12 col-sm-12 col-md-12 it-descript-contact">
                             <div class = "row">
+                                <span><?=GetMessage('SHARE')?></span>
                                 <div class = "col-xs-12 col-sm-12 col-md-7 col-lg-6 it-descript-social goodshare-color">
+
                                     <a href="#" class="goodshare" data-type="fb"><img src="/local/templates/.default/img/item/fb.png"></a>
                                     <a href="#" class="goodshare" data-type="vk"><img src="/local/templates/.default/img/item/vk.png"></a>
                                     <a href="#" class="goodshare" data-type="ok"><img src="/local/templates/.default/img/item/oc.png"></a>
@@ -145,6 +147,20 @@ $this->setFrameMode(true);?>
                             <?}?>
 
             <div class = "row it-character">
+                <?if($arResult["PROPERTIES"]["PHOTO_OUTPUT"]["VALUE_XML_ID"] == "Y"){?>
+                    <div class="supplementary_photo">
+                              <h2><?=GetMessage("TRANSFOMATION")?></h2>
+                             <? foreach($arResult["PROPERTIES"]["item_photos"]["VALUE"] as $photo){?>
+                                   <img src="<?=CFile::GetPath($photo);?>" width="1100px">
+                              <?}?>
+                    </div>
+                <?}?>
+
+                <?if ($arResult["PROPERTIES"]["DESCRIPTION_OUTPUT"]["VALUE_XML_ID"] == "Y"){?>
+                    <div class="addetional_description">
+                        <?=$arResult["PROPERTIES"]["ADDITIONAL_DESCRIPTION"]["VALUE"]["TEXT"]?>
+                    </div>
+                <?}?>
 
                 <div class = "hidden-xs hidden-sm col-md-1 col-lg-2"></div>
                 <?
