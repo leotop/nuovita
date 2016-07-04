@@ -151,7 +151,7 @@ $this->setFrameMode(true);?>
                     <div class="supplementary_photo">
                               <h2><?=GetMessage("TRANSFOMATION")?></h2>
                              <? foreach($arResult["PROPERTIES"]["item_photos"]["VALUE"] as $photo){?>
-                                   <img src="<?=CFile::GetPath($photo);?>" width="1100px">
+                                   <img src="<?=CFile::GetPath($photo);?>">
                               <?}?>
                     </div>
                 <?}?>
