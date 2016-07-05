@@ -6,48 +6,52 @@ IncludeTemplateLangFile(__FILE__);
 
 <div class = "row footer">
     <div class = "col-xs-6 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-        <?$APPLICATION->IncludeComponent("bitrix:menu", "top_menu", Array(
-            "ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-            "MAX_LEVEL" => "2",	// Уровень вложенности меню
-            "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-            "USE_EXT" => "Y",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-            "MENU_CACHE_TYPE" => "A",	// Тип кеширования
-            "MENU_CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-            "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-            "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-            "COMPONENT_TEMPLATE" => ".default",
-            "DELAY" => "N",	// Откладывать выполнение шаблона меню
-            "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-        ),
-            false,
-            array(
-                "ACTIVE_COMPONENT" => "Y"
-            )
-        );?>
+        <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top_menu", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MAX_LEVEL" => "2",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "Y",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "N",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"COMPONENT_TEMPLATE" => "top_menu",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false,
+	array(
+		"ACTIVE_COMPONENT" => "Y"
+	)
+);?>
     </div>
     <div class = "col-xs-6 col-md-2 col-lg-2">
         <?$APPLICATION->IncludeComponent(
-            "bitrix:menu",
-            "top_menu",
-            array(
-                "ROOT_MENU_TYPE" => "catalogmanu",
-                "MAX_LEVEL" => "1",
-                "CHILD_MENU_TYPE" => "catalogmanu",
-                "USE_EXT" => "Y",
-                "MENU_CACHE_TYPE" => "A",
-                "MENU_CACHE_TIME" => "36000000",
-                "MENU_CACHE_USE_GROUPS" => "Y",
-                "MENU_CACHE_GET_VARS" => array(
-                ),
-                "COMPONENT_TEMPLATE" => ".default",
-                "DELAY" => "N",
-                "ALLOW_MULTI_SELECT" => "N"
-            ),
-            false,
-            array(
-                "ACTIVE_COMPONENT" => "Y"
-            )
-        );?>
+	"bitrix:menu", 
+	"top_menu", 
+	array(
+		"ROOT_MENU_TYPE" => "catalogmanu",
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "catalogmanu",
+		"USE_EXT" => "Y",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "N",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"COMPONENT_TEMPLATE" => "top_menu",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false,
+	array(
+		"ACTIVE_COMPONENT" => "Y"
+	)
+);?>
     </div>
     <div class = "col-xs-12 col-md-2 col-lg-2">
         <div class = "row">
