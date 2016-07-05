@@ -999,3 +999,12 @@
     margin: 30px auto 0px;
     width: 67%;
 }
+.supplementary_photo > h2{
+    margin-top: 20px;
+}
+.supplementary_photo > img{
+    height: 230px;
+    margin: 20px;
+    width: auto;
+    text-align: center;
+}
