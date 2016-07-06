@@ -91,7 +91,7 @@ endif;
 <?
 if (!$USER->IsAuthorized()){
 ?>
-        <span class="forum-menu-item forum-menu-item-last forum-menu-authorize"><a href="/registration/">Регистрация</a></span>
+        <span class="forum-menu-item forum-menu-item-last forum-menu-authorize"><a href="/registration/"><?=GetMessage('REGISTRATION')?></a></span>
 <?
 };
 ?>
