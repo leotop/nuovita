@@ -19,16 +19,16 @@ $arUrlRewrite = array(
 		"PATH" => "/local/templates/nuovita/header.php",
 	),
 	array(
-		"CONDITION" => "#^/services/#",
-		"RULE" => "",
-		"ID" => "bitrix:catalog",
-		"PATH" => "/services/index.php",
-	),
-	array(
 		"CONDITION" => "#^/products/#",
 		"RULE" => "",
 		"ID" => "bitrix:catalog",
 		"PATH" => "/products/index.php",
+	),
+	array(
+		"CONDITION" => "#^/services/#",
+		"RULE" => "",
+		"ID" => "bitrix:catalog",
+		"PATH" => "/services/index.php",
 	),
 	array(
 		"CONDITION" => "#^/catalog/#",
@@ -41,6 +41,12 @@ $arUrlRewrite = array(
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/news/index.php",
+	),
+	array(
+		"CONDITION" => "#^/#",
+		"RULE" => "",
+		"ID" => "bitrix:main.register",
+		"PATH" => "/registratsiya/index.php",
 	),
 );
 

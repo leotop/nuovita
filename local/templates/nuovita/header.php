@@ -10,7 +10,6 @@
     <?$APPLICATION->ShowHead();?>
 
     <title><?$APPLICATION->ShowTitle()?></title>
-    <meta charset = "utf-8">
     <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.ico" type="image/x-icon">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/local/templates/.default/plugins/slider/responsiveslides.css">
@@ -130,8 +129,8 @@
             <div class = "row">
 
                 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"slider_list_template", 
+	"bitrix:news.list",
+	"slider_list_template",
 	array(
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",

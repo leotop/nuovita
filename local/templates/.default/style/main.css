@@ -5252,5 +5252,12 @@ h4 {
     width: 92%;
     border-bottom: solid 1px #f1f1f1;
 }
+.wrap_main{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 30px;
+    width: 70%;
+    margin: 0 auto;
+}
 
 /* items */

@@ -12,11 +12,10 @@ IncludeTemplateLangFile(__FILE__);
     <script src="/local/templates/.default/plugins/form-button/form_button.min.js"></script>
     <script src="/local/templates/.default/plugins/swipebox-master/jquery.swipebox.min.js"></script>
     <script type="text/javascript" src = "/local/templates/.default/plugins/social-nets/goodshare.min.js"></script>
-    
+
 	<?$APPLICATION->ShowHead();?>
 
 	<title><?$APPLICATION->ShowTitle()?></title>
-    <meta charset = "utf-8">
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/local/templates/.default/plugins/slider/responsiveslides.css">
 	<meta name = "format-detection" content = "telephone=no" />
@@ -62,8 +61,8 @@ IncludeTemplateLangFile(__FILE__);
                         </div>
 						<div class = "col-xs-12 col-md-8 header-link-1">
                             <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"top_menu", 
+	"bitrix:menu",
+	"top_menu",
 	array(
 		"ROOT_MENU_TYPE" => "top",
 		"MAX_LEVEL" => "1",
