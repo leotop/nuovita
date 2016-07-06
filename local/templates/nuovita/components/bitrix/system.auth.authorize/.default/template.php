@@ -26,7 +26,7 @@ ShowMessage($arResult['ERROR_MESSAGE']);
 	<div class="field">
 		<label class="field-title"><?=GetMessage("AUTH_LOGIN")?></label>
 		<div class="form-input"><input type="text" name="USER_LOGIN" maxlength="50" value="<?=$arResult["LAST_LOGIN"]?>" class="input-field" /></div>
-	</div>	
+	</div>
 	<div class="field">
 		<label class="field-title"><?=GetMessage("AUTH_PASSWORD")?></label>
 		<div class="form-input"><input type="password" name="USER_PASSWORD" maxlength="50" class="input-field" />
@@ -110,14 +110,14 @@ try{document.form_auth.USER_LOGIN.focus();}catch(e){}
 
 <?if($arResult["AUTH_SERVICES"]):?>
 <?
-$APPLICATION->IncludeComponent("bitrix:socserv.auth.form", "", 
+$APPLICATION->IncludeComponent("bitrix:socserv.auth.form", "",
 	array(
 		"AUTH_SERVICES"=>$arResult["AUTH_SERVICES"],
 		"CURRENT_SERVICE"=>$arResult["CURRENT_SERVICE"],
 		"AUTH_URL"=>$arResult["AUTH_URL"],
 		"POST"=>$arResult["POST"],
-	), 
-	$component, 
+	),
+	$component,
 	array("HIDE_ICONS"=>"Y")
 );
 ?>
