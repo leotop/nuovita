@@ -12,6 +12,7 @@ IncludeTemplateLangFile(__FILE__);
     <script src="/local/templates/.default/plugins/form-button/form_button.min.js"></script>
     <script src="/local/templates/.default/plugins/swipebox-master/jquery.swipebox.min.js"></script>
     <script type="text/javascript" src = "/local/templates/.default/plugins/social-nets/goodshare.min.js"></script>
+    <script type="text/javascript" src = "/local/templates/.default/js/main.js"></script>
 
 	<?$APPLICATION->ShowHead();?>
 

@@ -1,0 +1,31 @@
+
+.row.bottom-wrap{
+    margin: 0 auto;
+    width: 70%;
+}
+.wb-netshops-list{
+    width: 60%!important;
+    float: left;
+}
+.product_shop{
+    display: none;
+}
+
+.toggle_shop_bottom{
+    background: #a1daf7;
+    padding: 8px 23px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    float: left;
+}
+.toggle_shop_bottom:after{
+    border: 18px solid transparent;
+    border-top: 17px solid white;
+    content: '';
+    position: relative;
+    top: 20px;
+    left: 8px;
+}
