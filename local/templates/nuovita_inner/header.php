@@ -7,12 +7,14 @@ IncludeTemplateLangFile(__FILE__);
 <html>
 <head>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src = "/local/templates/.default/js/bootstrap.min.js"></script>
-    <script src="/local/templates/.default/plugins/slider/responsiveslides.min.js"></script>
-    <script src="/local/templates/.default/plugins/form-button/form_button.min.js"></script>
-    <script src="/local/templates/.default/plugins/swipebox-master/jquery.swipebox.min.js"></script>
-    <script type="text/javascript" src = "/local/templates/.default/plugins/social-nets/goodshare.min.js"></script>
-    <script type="text/javascript" src = "/local/templates/.default/js/main.js"></script>
+    <?
+        $APPLICATION->AddHeadScript('/local/templates/.default/js/bootstrap.min.js');
+        $APPLICATION->AddHeadScript('/local/templates/.default/plugins/slider/responsiveslides.min.js');
+        $APPLICATION->AddHeadScript('/local/templates/.default/plugins/form-button/form_button.min.js');
+        $APPLICATION->AddHeadScript('/local/templates/.default/plugins/swipebox-master/jquery.swipebox.min.js');
+        $APPLICATION->AddHeadScript('/local/templates/.default/plugins/social-nets/goodshare.min.js');
+        $APPLICATION->AddHeadScript('/local/templates/.default/js/main.js');
+    ?>
 
 	<?$APPLICATION->ShowHead();?>
 
