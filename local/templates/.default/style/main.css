@@ -1252,10 +1252,6 @@ h4 {
             height: auto;
         }
 
-        .it-tabs .content {
-            position: absolute;
-        }
-
         .it-tabs .content img {
             max-width: 30em;
             vertical-align: bottom;
@@ -2438,10 +2434,6 @@ h4 {
             height: auto;
         }
 
-        .it-tabs .content {
-            position: absolute;
-        }
-
         .it-tabs .content img {
             max-width: 35em;
             vertical-align: bottom;
@@ -3302,9 +3294,7 @@ h4 {
             padding: 2em 0em 0em 0em;
         }
 
-        .wb-shops-list {
-            padding: 0em 0em 15em 0em
-        }
+
 
         .wb-shop-name {
             color: #7f858c;
@@ -3661,10 +3651,6 @@ h4 {
             margin: 10px auto;
             width: 78%;
             height: auto;
-        }
-
-        .it-tabs .content {
-            position: absolute;
         }
 
         .it-tabs .content img {
@@ -4573,9 +4559,7 @@ h4 {
             padding: 2em 0em 0em 0em;
         }
 
-        .wb-shops-list {
-            padding: 0em 0em 15em 0em
-        }
+
 
         .wb-shop-name {
             color: #7f858c;
@@ -4932,10 +4916,6 @@ h4 {
             margin: 10px auto;
             width: 78%;
             height: auto;
-        }
-
-        .it-tabs .content {
-            position: absolute;
         }
 
         .it-tabs .content img {

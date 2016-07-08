@@ -1,0 +1,43 @@
+.wb-shops-list{
+    width:70%!important;
+}
+.yandex_map{
+    float:right;
+    text-align: center;
+}
+.yandex_map .ymaps-map{
+    border-radius: 20px;
+}
+.row.wb-bottom-back{
+    margin: 0 auto;
+    width: 70%;
+}
+.wb-shops-list{
+    width: 40%!important;
+    float: left;
+}
+.wb-shops-list .col-lg-8{
+    width: 100%;
+}
+.product_next{
+    display: none;
+}
+.toggle_shop{
+    background: #a1daf7;
+    padding: 8px 23px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.toggle_shop:after{
+    border: 18px solid transparent;
+    border-top: 17px solid white;
+    content: '';
+    position: relative;
+    top: 20px;
+    left: 8px;
+}
+.bx-yandex-map{
+    margin: 0 auto;
+}

@@ -991,6 +991,8 @@
 }
 .supplementary_photo{
     text-align: center;
+    clear: both;
+    margin-top: 40px;
 }
 .supplementary_photo > h2{
     text-align: center;
