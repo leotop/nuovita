@@ -22,6 +22,13 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
+		"Наши награды", 
+		"/honors/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Магазины", 
 		"/magaziny", 
 		Array(), 
