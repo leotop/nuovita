@@ -13,7 +13,7 @@
     width: 70%;
 }
 .wb-shops-list{
-    width: 40%!important;
+    width: 45%!important;
     float: left;
 }
 .wb-shops-list .col-lg-8{
@@ -36,6 +36,14 @@
     content: '';
     position: relative;
     top: 20px;
+    left: 8px;
+}
+.col-lg-6 .top:after{
+    border: 18px solid transparent;
+    border-bottom: 17px solid white;
+    content: '';
+    position: relative;
+    top: -20px;
     left: 8px;
 }
 .bx-yandex-map{

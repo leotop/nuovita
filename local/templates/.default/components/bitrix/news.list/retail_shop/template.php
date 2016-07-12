@@ -67,9 +67,9 @@ $this->setFrameMode(true);
 
 ?>      </div>
         <?endforeach;?>
-        <?if($countProduct > 2){?>
-        <span class="toggle_shop" onclick="toggle_product('product_next')"><?=GetMessage('SHOP')?></span>
-        <?}?>
+        <?if ($countProduct > 2) {?>
+            <span class="toggle_shop" onclick="toggle_product('product_next', 'toggle_shop')"><?=GetMessage('SHOP')?></span>
+        <? } ?>
     </div>
 </div>
 <div class="yandex_map">
