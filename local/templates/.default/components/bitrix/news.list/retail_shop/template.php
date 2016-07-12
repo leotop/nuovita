@@ -68,7 +68,7 @@ $this->setFrameMode(true);
 ?>      </div>
         <?endforeach;?>
         <?if($countProduct > 2){?>
-        <span class="toggle_shop" onclick="toggle_product('product_next')"><?=GetMessage('SHOP')?></span>
+        <span class="toggle_shop" onclick="toggle_product('product_next', 'toggle_shop')"><?=GetMessage('SHOP')?></span>
         <?}?>
     </div>
 </div>

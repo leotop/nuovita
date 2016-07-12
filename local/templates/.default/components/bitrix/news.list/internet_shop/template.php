@@ -22,7 +22,7 @@ $this->setFrameMode(true);
     <div class="row">
         <?foreach($arResult["ITEMS"] as $key => $arItem):?>
         <?$countProduct = count($arResult["ITEMS"])-1;?>
-        <div class="<?=($key > 2) ? 'product_shop' : '';?>">
+        <div class="<?=($key > 4) ? 'product_shop' : '';?>">
 	        <?
 	        $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	        $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
@@ -43,8 +43,8 @@ $this->setFrameMode(true);
                 <div class="clearfix"></div>
         </div>
         <?endforeach;?>
-        <?if($countProduct > 2){?>
-            <span class="toggle_shop_bottom" onclick="toggle_product('product_shop')"><?=GetMessage('SHOP')?></span>
+        <?if($countProduct > 4){?>
+            <span class="toggle_shop_bottom" onclick="toggle_product('product_shop', 'toggle_shop_bottom')"><?=GetMessage('SHOP')?></span>
         <?}?>
     </div>
 </div>
