@@ -78,7 +78,7 @@ window.reviewsCtrlEnterHandler<?=CUtil::JSEscape($arParams["form_index"]);?> = f
 		endif;
 		?>
 		<div class="reviews-reply-header"><span><?=$arParams["MESSAGE_TITLE"]?></span><span class="reviews-required-field">*</span></div>
-		<div class="reviews-reply-field reviews-reply-field-text">
+        <div class="reviews-reply-field reviews-reply-field-text">
 			<?
 			$arSmiles = array();
 			if ($arResult["FORUM"]["ALLOW_SMILES"] == "Y")
@@ -124,7 +124,9 @@ window.reviewsCtrlEnterHandler<?=CUtil::JSEscape($arParams["form_index"]);?> = f
 			$LHE->Show($arEditorParams);
 			?>
 		</div>
-		<?
+        <div class="reviews-reply-header"><span><?=GetMessage("EMAIL")?></span><span class="reviews-required-field">*</span></div>
+        <div class="reviews-reply-header"><input type="text"></div>
+        <?
 
 		/* CAPTHCA */
 		if (strLen($arResult["CAPTCHA_CODE"]) > 0):
