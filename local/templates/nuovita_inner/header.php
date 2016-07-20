@@ -22,6 +22,7 @@ IncludeTemplateLangFile(__FILE__);
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/local/templates/.default/plugins/slider/responsiveslides.css">
 	<meta name = "format-detection" content = "telephone=no" />
+    <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/local/templates/.default/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/local/templates/.default/style/main.css" media = "screen">
     <link rel="stylesheet" type="text/css" href="/local/templates/.default/style/form_button.css" media = "screen">
