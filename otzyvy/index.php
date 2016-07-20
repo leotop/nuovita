@@ -2,89 +2,37 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Отзывы");
 ?>
-<?$APPLICATION->IncludeComponent(
-    "bitrix:forum",
-    "forum_nuovita",
-    Array(
-        "AJAX_POST" => "Y",
-        "ATTACH_MODE" => array(0=>"THUMB",1=>"NAME",),
-        "ATTACH_SIZE" => "500",
-        "CACHE_TIME" => "3600",
-        "CACHE_TIME_FOR_FORUM_STAT" => "3600",
-        "CACHE_TIME_USER_STAT" => "60",
-        "CACHE_TYPE" => "A",
-        "CHECK_CORRECT_TEMPLATES" => "Y",
-        "COMPONENT_TEMPLATE" => "forum_nuovita",
-        "DATE_FORMAT" => "d.m.Y",
-        "DATE_TIME_FORMAT" => "d.m.Y H:i:s",
-        "EDITOR_CODE_DEFAULT" => "N",
-        "FID" => array(),
-        "FILES_COUNT" => "5",
-        "FORUMS_PER_PAGE" => "20",
-        "HELP_CONTENT" => "",
-        "IMAGE_SIZE" => "500",
-        "MESSAGES_PER_PAGE" => "25",
-        "NAME_TEMPLATE" => "",
-        "NO_WORD_LOGIC" => "N",
-        "PAGE_NAVIGATION_TEMPLATE" => "forum",
-        "PAGE_NAVIGATION_WINDOW" => "5",
-        "PATH_TO_AUTH_FORM" => "",
-        "PATH_TO_ICON" => "/bitrix/images/forum/icon/",
-        "PATH_TO_SMILE" => "/bitrix/images/forum/smile/",
-        "RATING_ID" => array(),
-        "RATING_TYPE" => "standart",
-        "RESTART" => "N",
-        "RSS_CACHE" => "1800",
-        "RSS_COUNT" => "30",
-        "RSS_TN_DESCRIPTION" => "",
-        "RSS_TN_TITLE" => "",
-        "RSS_TYPE_RANGE" => array(0=>"RSS1",1=>"RSS2",2=>"ATOM",),
-        "RULES_CONTENT" => "",
-        "SEF_FOLDER" => "/communication/forum/",
-        "SEF_MODE" => "Y",
-        "SEF_URL_TEMPLATES" => array("index"=>"index.php","list"=>"forum#FID#/","read"=>"forum#FID#/topic#TID#/","message"=>"messages/forum#FID#/topic#TID#/message#MID#/","help"=>"help/","rules"=>"rules/","message_appr"=>"message/approve/forum#FID#/topic#TID#/","message_move"=>"message/move/forum#FID#/topic#TID#/message#MID#/","rss"=>"rss/#TYPE#/#MODE#/#IID#/","search"=>"search/","subscr_list"=>"subscribe/","active"=>"topic/new/","topic_move"=>"topic/move/forum#FID#/topic#TID#/","topic_new"=>"topic/add/forum#FID#/","topic_search"=>"topic/search/","user_list"=>"users/","profile"=>"user/#UID#/edit/","profile_view"=>"user/#UID#/","user_post"=>"user/#UID#/post/#mode#/","message_send"=>"user/#UID#/send/#TYPE#/","pm_list"=>"pm/forlder#FID#/","pm_edit"=>"pm/folder#FID#/message#MID#/user#UID#/#mode#/","pm_read"=>"pm/folder#FID#/message#MID#/","pm_search"=>"pm/search/","pm_folder"=>"pm/folders/",),
-        "SEND_ICQ" => "A",
-        "SEND_MAIL" => "U",
-        "SEO_USER" => "Y",
-        "SEO_USE_AN_EXTERNAL_SERVICE" => "Y",
-        "SET_DESCRIPTION" => "Y",
-        "SET_NAVIGATION" => "Y",
-        "SET_PAGE_PROPERTY" => "Y",
-        "SET_TITLE" => "Y",
-        "SHOW_AUTHOR_COLUMN" => "Y",
-        "SHOW_AUTH_FORM" => "Y",
-        "SHOW_FIRST_POST" => "Y",
-        "SHOW_FORUMS" => "Y",
-        "SHOW_FORUM_ANOTHER_SITE" => "N",
-        "SHOW_FORUM_USERS" => "N",
-        "SHOW_LEGEND" => "Y",
-        "SHOW_NAME_LINK" => "Y",
-        "SHOW_NAVIGATION" => "N",
-        "SHOW_RATING" => "Y",
-        "SHOW_STATISTIC_BLOCK" => array(0=>"STATISTIC",),
-        "SHOW_SUBSCRIBE_LINK" => "N",
-        "SHOW_TAGS" => "Y",
-        "SHOW_VOTE" => "Y",
-        "SMILES_COUNT" => "100",
-        "THEME" => "blue",
-        "TIME_INTERVAL_FOR_USER_STAT" => "10",
-        "TMPLT_SHOW_ADDITIONAL_MARKER" => "",
-        "TOPICS_PER_PAGE" => "20",
-        "USER_FIELDS" => array(0=>"UF_FORUM_MES_URL_PRV",),
-        "USER_PROPERTY" => array(),
-        "USE_LIGHT_VIEW" => "N",
-        "USE_NAME_TEMPLATE" => "N",
-        "USE_RSS" => "Y",
-        "VOTE_CHANNEL_ID" => "",
-        "VOTE_COUNT_ANSWERS" => "20",
-        "VOTE_COUNT_QUESTIONS" => "10",
-        "VOTE_GROUP_ID" => array(0=>"1",),
-        "VOTE_TEMPLATE" => "light",
-        "VOTE_UNIQUE" => array(0=>"8",),
-        "VOTE_UNIQUE_IP_DELAY" => "10 D",
-        "WORD_LENGTH" => "50",
-        "WORD_WRAP_CUT" => "23"
-    )
-);?>
 
+ <?$APPLICATION->IncludeComponent("bitrix:forum.topic.reviews", "komment_nuovita", Array(
+	"SHOW_LINK_TO_FORUM" => "N",	// Показать ссылку на форум
+		"FILES_COUNT" => "2",	// Максимальное количество файлов, прикрепленных к одному сообщению
+		"FORUM_ID" => "1",	// ID форума для отзывов
+		"TASK_ID" => "74",
+		"POST_FIRST_MESSAGE" => "Y",
+		"POST_FIRST_MESSAGE_TEMPLATE" => "#IMAGE#[url=#LINK#]#TITLE#[/url]#BODY#",
+		"URL_TEMPLATES_READ" => "",	// Страница чтения темы форума
+		"URL_TEMPLATES_DETAIL" => "",	// Страница элемента инфоблока
+		"URL_TEMPLATES_PROFILE_VIEW" => "",	// Страница пользователя
+		"SHOW_RATING" => "",	// Включить рейтинг
+		"RATING_TYPE" => "like_graphic",	// Вид кнопок рейтинга
+		"MESSAGES_PER_PAGE" => "20",	// Количество сообщений на одной странице
+		"PAGE_NAVIGATION_TEMPLATE" => "",	// Название шаблона для вывода постраничной навигации
+		"DATE_TIME_FORMAT" => "d.m.Y H:i:s",	// Формат показа даты и времени
+		"PATH_TO_SMILE" => "/bitrix/images/forum/smile/",
+		"USE_CAPTCHA" => "Y",	// Использовать CAPTCHA
+		"PREORDER" => "Y",	// Выводить сообщения в прямом порядке
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "0",	// Время кеширования (сек.)
+		"COMPONENT_TEMPLATE" => ".default",
+		"IBLOCK_TYPE" => "reviews",	// Тип информационного блока (используется только для проверки)
+		"IBLOCK_ID" => "11",	// Код информационного блока
+		"ELEMENT_ID" => "74",	// ID элемента
+		"NAME_TEMPLATE" => "",	// Формат имени
+		"EDITOR_CODE_DEFAULT" => "N",	// По умолчанию показывать невизуальный режим редактора
+		"SHOW_AVATAR" => "Y",	// Показывать аватары пользователей
+		"SHOW_MINIMIZED" => "N",	// Сворачивать форму добавления отзыва
+		"AJAX_POST" => "Y",	// Использовать AJAX в диалогах
+	),
+	false
+);?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
