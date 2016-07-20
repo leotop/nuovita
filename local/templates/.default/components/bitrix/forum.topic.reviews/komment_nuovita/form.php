@@ -124,8 +124,7 @@ window.reviewsCtrlEnterHandler<?=CUtil::JSEscape($arParams["form_index"]);?> = f
 			$LHE->Show($arEditorParams);
 			?>
 		</div>
-        <div class="reviews-reply-header"><span><?=GetMessage("EMAIL")?></span><span class="reviews-required-field">*</span></div>
-        <div class="reviews-reply-header"><input type="text"></div>
+
         <?
 
 		/* CAPTHCA */
