@@ -115,8 +115,6 @@ $this->setFrameMode(true);?>
                 if ($transformationsList -> SelectedRowsCount() > 0) {
                 ?>
                     <div class = "row">
-                        <div class = "hidden-xs hidden-sm col-md-12 col-lg-12 item-second-header">Возможные трансформации</div>
-
                         <div class = "hidden-xs hidden-sm col-md-0 col-lg-0"></div>
 
                         <div class = "hidden-xs hidden-sm col-md-12 col-lg-12">
@@ -149,7 +147,17 @@ $this->setFrameMode(true);?>
             <div class = "row it-character">
                 <?if($arResult["PROPERTIES"]["PHOTO_OUTPUT"]["VALUE_XML_ID"] == "Y"){?>
                     <div class="supplementary_photo">
-                              <h2><?=GetMessage("TRANSFOMATION")?></h2>
+                              <h2>
+                              <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    "",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "EDIT_TEMPLATE" => "standard.php",
+                                        "PATH" => '/include/image.php'
+                                    )
+                                );?></h2>
                              <? foreach($arResult["PROPERTIES"]["item_photos"]["VALUE"] as $photo){?>
                                    <img src="<?= CFile::GetPath($photo); ?>">
                               <?}?>
