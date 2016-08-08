@@ -230,26 +230,26 @@ li img {
 
 @media (max-width: 959px) {
     #centered-btns1_s0{
-    padding-top: 0em;
+    padding-top: 0;
     width: 100%;
     left: 0;
     line-height: 0px;
-    background-color: #ff849b;
+    background-color: #ffffff;
   }
 
   #centered-btns1_s1{
-    padding-top: 23em;
+    padding-top: 0;
     width: 100%;
     left: 0;
     line-height: 0px;
-    background-color: #a6ffbb;
+    background-color: #ffffff;
   }
 
   #centered-btns1_s2{
-    padding-top: 23em;
+    padding-top: 0;
     width: 100%;
     left: 0;
     line-height: 0px;
-    background-color: #e879e2;
+    background-color: #ffffff;
   }
 }

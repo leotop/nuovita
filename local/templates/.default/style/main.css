@@ -592,8 +592,8 @@ h4 {
             -moz-border-radius: 1em; */
         }
 
-        .rslider_max_img {display: none;}
-        .rslider_min_img {display: block;}
+        .rslider_max_img {display: block;}
+        .rslider_min_img {display: none;}
 
         /*text-Р Р…Р В°РЎРѓРЎвЂљРЎР‚Р С•Р ВµР Р…Р С‘Р Вµ Р Р…Р В° Р С–Р В»Р В°Р Р†Р Р…Р С•Р в„–*/
         .xl-first-text {padding: 0em 1em;}
@@ -1774,11 +1774,11 @@ h4 {
 
 
         .rslider_max_img {
-            display: none;
+            display: block;
         }
 
         .rslider_min_img {
-            display: block;
+            display: none;
         }
 
         /*text-настроение на главной*/
