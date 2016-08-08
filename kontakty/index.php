@@ -12,12 +12,10 @@ $APPLICATION->SetTitle("Контакты");
 
 								<div class = "col-xs-12 second-header">Представительство <br>и сервисный центр</div>
 								<div class = "col-xs-12 con-name">ООО «Нуовита»</div>
-								<div class = "col-xs-12 con-address">г. Москва, 1-й Институтский проезд, д. 3, стр. 10</div>
-								<div class = "col-xs-12 con-time">Пн-Пт: 9:00 – 18:00</div>
 								<div class = "col-xs-12 con-phone">+7 495 709 34 38</div>
 								<div class = "col-xs-12 con-mail"><a href="mailto:info@nuovita.ru">info@nuovita.ru</a></div>
 								
-								<div class = "col-xs-12 second-header">Официальный дистрибьютор</div>
+								<div class = "col-xs-12 second-header">Эксклюзивный дистрибьютор</div>
 								<div class = "col-xs-12 con-cooperation-text">
 									<div class = "col-xs-12 con-name">ООО «Амата»</div>
 									<div class = "col-xs-12 con-address">г. Москва, 1-й Институтский проезд, д. 3, стр. 10</div>
