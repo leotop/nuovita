@@ -400,9 +400,9 @@ if ($arResult['CATALOG'] && isset($arResult['OFFERS']) && !empty($arResult['OFFE
 	}
 	$arResult['OFFERS_PROP'] = $arUsedFields;
 	$arResult['OFFERS_PROP_CODES'] = (!empty($arUsedFields) ? base64_encode(serialize(array_keys($arUsedFields))) : '');
-
-	Collection::sortByColumn($arResult['OFFERS'], $arSortFields);
-
+    
+	//Collection::sortByColumn($arResult['OFFERS'], $arSortFields);
+    
 	$offerSet = array();
 	if (!empty($arIDS) && CBXFeatures::IsFeatureEnabled('CatCompleteSet'))
 	{
@@ -442,7 +442,7 @@ if ($arResult['CATALOG'] && isset($arResult['OFFERS']) && !empty($arResult['OFFE
 			$arResult['OFFER_GROUP_VALUES'] = array_keys($offerSet);
 		}
 	}
-
+    
 	$arMatrix = array();
 	$intSelected = -1;
 	$arResult['MIN_PRICE'] = false;
